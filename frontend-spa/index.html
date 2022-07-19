@@ -4,11 +4,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 5 Project</title>
+    <title>Soda Sounds</title>
+    <link rel="stylesheet" href="/frontend-spa/css/style.css">
+    <link rel="stylesheet" href="/frontend-spa/css/layout.css">
 </head>
 
 <body>
-
+    <header class="topPage">
+        <div class="siteNameLogo">
+            <h1 class="siteName">Soda Sounds</h1>
+            <img src="" class="siteLogo" alt="">
+        </div>
+        <div class="searchBar">
+            <!-- <label for="">Search</label> -->
+            <input type="search" placeholder="search for artists, albums, genres, and songs...">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+    <div class="mainContainer">
+        <div class="jukeboxLeft">
+            <h3>Artists</h3>
+            <ol>
+                <li>
+                    <img src="" class="artistPic" alt="">
+                    <a href="">Artist 1</a>
+                </li>
+            </ol>
+        </div>
+        <div class="jukeboxMiddle">
+            <div>
+                <h2 class="albumSelected"></h2>
+                <img src="" class="albumPicMiddle" alt="">
+            </div>
+            <div class="selectedSongInfo">
+                <h3 class="songTitle">Song Title</h3>
+                <ul>
+                    <a href="">
+                        <li class="playLink">Play</li>
+                    </a>
+                    <li class="songDuration">Song Duration: 1:67 minutes</li>
+                    <li class="songYear">Song Year</li>
+                    <li class="songCollabs">Song Artists</li>
+                    <li class="songCompany">Song Company</li>
+                </ul>
+            </div>
+            <div class="trackListings">
+                <ol>
+                    <a href="">
+                        <li>Track 1</li>
+                    </a>
+                </ol>
+            </div>
+        </div>
+        <div class="jukeboxRight">
+            <h3>Albums</h3>
+            <ol>
+                <li>
+                    <img src="" class="albumPicSide" alt="">
+                    <a href="">Album 1</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <footer>
+        <a class="aboutUs" href="#popup1">About Us</a>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Soda Sounds</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">Our company was founded in 1912. The settlers disliked our soda so we decided to do
+                    what we do best and switched over to music file management!
+                </div>
+            </div>
+        </div>
+        <p class="copyright">Soda Sounds &copy;2022</p>
+        <a class="aboutUs" href="#popup2">Our Dev Team</a>
+        <div id="popup2" class="overlay">
+            <div class="popup">
+                <h2>Our Dev Team</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content2">
+                    <ul class="teamList">
+                        <li>
+                            <div class="devs">
+                                <div>
+                                    <h4 class="devNames">Ferie Dagnew</h4>
+                                </div>
+                                <div class="devProfiles">
+                                    <img src="" class="devPics" alt="">
+                                    <p class="jobTitle">Back End Developer</p>
+                                    <div class="devLinks">
+                                        <div>
+                                            <a href="github.com" class="devGithubs">
+                                                <img src="/frontend-spa/images/githublogo.png" class="linkLogo" alt="">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="linkedin.com" class="linkedIn">
+                                                <img src="/frontend-spa/images/linkedInlogo.png" class="linkLogo"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <hr>
+                        <li>
+                            <div class="devs">
+                                <div class>
+                                    <h4 class="devNames">Taylour Harris</h4>
+                                </div>
+                                <div class="devProfiles">
+                                    <img src="" class="devPics" alt="">
+                                    <p class="jobTitle">Front End Developer</p>
+                                    <div class="devLinks">
+                                        <div>
+                                            <a href="github.com" class="devGithubs">
+                                                <img src="/frontend-spa/images/githublogo.png" class="linkLogo" alt="">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="linkedin.com" class="linkedIn">
+                                                <img src="/frontend-spa/images/linkedInlogo.png" class="linkLogo"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <hr>
+                        <li>
+                            <div class="devs">
+                                <div class>
+                                    <h4 class="devNames">Alex Stein</h4>
+                                </div>
+                                <div class="devProfiles">
+                                    <img src="" class="devPics" alt="">
+                                    <p class="jobTitle">Back End Developer</p>
+                                    <div class="devLinks">
+                                        <div>
+                                            <a href="github.com" class="devGithubs">
+                                                <img src="/frontend-spa/images/githublogo.png" class="linkLogo" alt="">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="linkedin.com" class="linkedIn">
+                                                <img src="/frontend-spa/images/linkedInlogo.png" class="linkLogo"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <hr>
+                        <li>
+                            <div class="devs">
+                                <div class>
+                                    <h4 class="devNames">Zakariya Mohamud</h4>
+                                </div>
+                                <div class="devProfiles">
+                                    <img src="" class="devPics" alt="">
+                                    <p class="jobTitle">Front End Developer</p>
+                                    <div class="devLinks">
+                                        <div>
+                                            <a href="github.com" class="devGithubs">
+                                                <img src="/frontend-spa/images/githublogo.png" class="linkLogo" alt="">
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="linkedin.com" class="linkedIn">
+                                                <img src="/frontend-spa/images/linkedInlogo.png" class="linkLogo"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/frontend-spa/src/js/app.js"></script>
 </body>
 
 </html>
