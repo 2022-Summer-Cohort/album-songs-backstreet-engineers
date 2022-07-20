@@ -25,6 +25,9 @@ public class Album {
         title = newTitle;
     }
 
+    public Album(String title) {
+        this.title = title;
+    }
 
     public Album() {
     }
