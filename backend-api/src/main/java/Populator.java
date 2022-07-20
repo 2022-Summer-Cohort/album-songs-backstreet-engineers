@@ -28,5 +28,5 @@ public class Populator implements CommandLineRunner {
        Album album1 = new Album("Bad" );
        albumRepo.save(album1);
        Song song1 = new Song("Bad", 4,album1);
-
+    }
 }
