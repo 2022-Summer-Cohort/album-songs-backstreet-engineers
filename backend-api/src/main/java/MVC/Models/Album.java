@@ -21,6 +21,11 @@ public class Album {
         this.artists = artists;
     }
 
+    public void changeTitle(String newTitle){
+        title = newTitle;
+    }
+
+
     public Album() {
     }
     public long albumDuration(){
