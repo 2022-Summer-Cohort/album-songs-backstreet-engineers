@@ -46,4 +46,12 @@ public class SongController {
     public String deleteById(@PathVariable("id") Long id) {
         return "Delete by id called";
     }
+    @PostMapping("/api/songs/{id}/ratings")
+    public Song songToAddRating (@RequestBody String newRatings, @PathVariable Long id){
+
+        Song songToAdd = songRepo.findById(id).get();
+        songToAdd.addRatings(newRatings);
+        songRepo.save(songToAdd);
+        return songToAdd;
+    }
 }
