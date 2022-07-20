@@ -37,6 +37,11 @@ public class Album {
 
     }
 
+    public void changeTitle(String newTitle){
+        title = newTitle;
+    }
+
+
     public Album() {
     }
 

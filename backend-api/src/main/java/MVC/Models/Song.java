@@ -33,6 +33,11 @@ public class Song {
     public Song() {
     }
 
+    public void changeTitle(String newTitle){
+        title = newTitle;
+    }
+
+
     public long getId() {
         return id;
     }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soda Sounds</title>
+    <title>Soda Sound</title>
     <link rel="stylesheet" href="/frontend-spa/css/style.css">
     <link rel="stylesheet" href="/frontend-spa/css/layout.css">
 </head>
@@ -23,33 +23,106 @@
     </header>
     <div class="mainContainer">
         <div class="jukeboxLeft">
-            <h3>Top 10 Artists</h3>
+            <h3>Similar Albums</h3>
             <ol>
-                <a href="">
-                    <li>Artist 1</li>
-                </a>
+                <li>
+                    <img src="" class="artistPic" alt="">
+                    <a href="">Artist 1</a>
+                </li>
             </ol>
         </div>
         <div class="jukeboxMiddle">
-            <div>
-                <img src="/frontend-spa/images/sodaSoundLogo.png" class="siteLogoHome" alt="">
+            <div class="albumGroup">
+                <div class="albumPart1">
+                    <h2 class="albumSelected">Album Name</h2>
+                    <h4 class="recordLabel">Record Label</h4>
+                    <img src="" class="albumPicMiddle" alt="">
+                </div>
+                <div class="albumPart2">
+                    <div class="albumRating">
+                        <div class="ratingCombo">
+                            <h4>Album Rating</h4>
+                            <div class="rating">
+                                <p class="starRating">4</p>
+                                <p class="fiveStars">/5</p>
+                            </div>
+                        </div>
+                        <div class="albumLeaveRating">
+                            <label for="stars">Rate Album (0-5):</label>
+                            <input type="number" name="stars" min="0" max="5">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                    <div class="albumReviews">
+                        <h4>Album Reviews</h4>
+                        <ul>
+                            <li>
+                                <p>Review 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, eum!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="albumLeaveReview">
+                        <input type="text" placeholder="write a review...">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
             </div>
             <div class="selectedSongInfo">
-                <h3 class="topTenSongs">Top 10 Songs</h3>
+                <h3 class="songTitle">Song Title</h3>
                 <ul>
-                    <a href="">
-                        <li class="songsList">Song 1</li>
-                    </a>
+                    <li class="songDuration">Song Duration: 1:67 minutes</li>
+                    <li class="songCollabs">Song Artists</li>
                 </ul>
+                <div class="songUserInputGroup">
+                    <div class="songPart1">
+                        <div class="songRating">
+                            <div class="ratingCombo">
+                                <h4>Song Rating</h4>
+                                <div class="rating">
+                                    <p class="starRating">4</p>
+                                    <p class="fiveStars">/5</p>
+                                </div>
+                            </div>
+                            <div class="songLeaveRating">
+                                <label for="stars">Rate Song (0-5):</label>
+                                <input type="number" name="stars" min="0" max="5">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="songPart2">
+                        <div class="songReviews">
+                            <h4>Song Reviews</h4>
+                            <ul>
+                                <li>
+                                    <p>Review 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, consectetur?</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="songLeaveReview">
+                            <input type="text" placeholder="write a review...">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="trackListings">
+                <h3>Album Tracks</h3>
+                <ol>
+                    <a href="">
+                        <li>Track 1</li>
+                    </a>
+                </ol>
             </div>
         </div>
         <div class="jukeboxRight">
-            <h3>Top 10 Albums</h3>
+            <h3>Artist's Albums</h3>
             <ol>
-                <a href="">
+                <li>
                     <img src="" class="albumPicSide" alt="">
-                    <li>Album 1</li>
-                </a>
+                    <a href="">Album 1</a>
+                </li>
             </ol>
         </div>
     </div>
