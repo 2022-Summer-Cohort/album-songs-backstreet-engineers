@@ -1,34 +1,39 @@
-export default function album() {
+export default function album(album, song) {
     return `
     <div class="mainContainer">
     <div class="top">
         <div class="albumGroup">
             <div class="albumPart1">
-                <h4 class="artist">Artist Name</h4>
-                <h4 class="recordLabel">Record Label</h4>
+                <h4 class="artist">${album.artist}</h4>
+                <h4 class="recordLabel">${album.recordLabel}</h4>
                 <div class="albumRating">
                     <div class="ratingCombo">
                         <h4>Album Rating</h4>
                         <div class="rating">
-                            <p class="starRating">4</p>
+                            <p class="starRating">${album.avgRating}</p>
                             <p class="fiveStars">/5</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="albumPart2">
-                <h2 class="albumSelected">Album Name</h2>
-                <img src="" class="albumPicMiddle" alt="">
+                <h2 class="albumSelected">${album.title}</h2>
+                <img src=${album.imageUrl} class="albumPicMiddle" alt="">
             </div>
             <div class="albumPart3">
                 <div class="albumReviews">
                     <h4>Album Reviews</h4>
-                    <ul>
-                        <li>
-                            <p>Review 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, eum!
-                            </p>
-                        </li>
-                    </ul>
+                    ${
+                    album.comments.map(comment => {
+                        return `
+                            <div class="review1">
+                            <h4>${comment.author}</h4>
+                            <p>${comment.content}</p>
+
+                            </div>
+                        `
+                    }).join("")
+                }  
                 </div>
                 <div class="albumLeaveReview">
                     <input type="text" placeholder="write a review...">
@@ -40,77 +45,28 @@ export default function album() {
     <div class="middle">
         <div class="trackListings">
             <h3>Album Tracks</h3>
-            <ol>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-                <div class="trackButton">
-                    <a href="">
-                        <li>Track 1</li>
-                    </a>
-                </div>
-            </ol>
+            ${
+                    album.songs.map(song => {
+                        return `
+                        <ol>
+                        <div class="trackButton">
+                            <a href="${album.song}">
+                                <li>${song.title}</li>
+                            </a>
+                        </div>
+                        </ol>
+                        `
+                    }).join("")
+                }  
         </div>
     </div>
     <div class="bottom">
         <div class="songPart1">
             <div class="selectedSongInfo">
-                <h3 class="songTitle">Song Title</h3>
+                <h3 class="songTitle">${song.title}</h3>
                 <ul>
-                    <li class="songDuration">Song Duration: 1:67 minutes</li>
-                    <li class="songCollabs">Song Artists</li>
+                    <li class="songDuration">${song.duration}</li>
+                    <li class="songCollabs">${song.artist}</li>
                 </ul>
             </div>
         </div>
@@ -120,7 +76,7 @@ export default function album() {
                     <div class="ratingCombo">
                         <h4>Song Rating</h4>
                         <div class="rating">
-                            <p class="starRating">4</p>
+                            <p class="starRating">${song.avgRating()}</p>
                             <p class="fiveStars">/5</p>
                         </div>
                     </div>
@@ -132,12 +88,17 @@ export default function album() {
                 </div>
                 <div class="songReviews">
                     <h4>Song Reviews</h4>
-                    <ul>
-                        <li>
-                            <p>Review 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
-                                consectetur?</p>
-                        </li>
-                    </ul>
+                    ${
+                        song.comments.map(comment => {
+                            return `
+                                <div class="review1">
+                                <h4>${comment.author}</h4>
+                                <p>${comment.content}</p>
+    
+                                </div>
+                            `
+                        }).join("")
+                    }  
                     <div class="songLeaveReview">
                         <input type="text" placeholder="write a review...">
                         <button type="submit">Submit</button>
