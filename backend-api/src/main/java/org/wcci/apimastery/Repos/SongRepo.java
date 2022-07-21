@@ -1,6 +1,6 @@
-package MVC.Repos;
+package org.wcci.apimastery.Repos;
 
-import MVC.Models.Song;
+import org.wcci.apimastery.Models.Song;
 import org.springframework.data.repository.CrudRepository;
 
 public interface SongRepo extends CrudRepository<Song, Long> {

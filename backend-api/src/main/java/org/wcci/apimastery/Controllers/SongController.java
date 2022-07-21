@@ -1,16 +1,14 @@
-package MVC.Controllers;
+package org.wcci.apimastery.Controllers;
 
-import MVC.Models.Album;
-import MVC.Models.Song;
-import MVC.Repos.AlbumRepo;
-import MVC.Repos.SongRepo;
+import org.wcci.apimastery.Models.Song;
+import org.wcci.apimastery.Repos.AlbumRepo;
+import org.wcci.apimastery.Repos.SongRepo;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class SongController {
 
     private SongRepo songRepo;
-
     private AlbumRepo albumRepo;
 
     public SongController(SongRepo songRepo, AlbumRepo albumRepo) {
@@ -29,7 +27,7 @@ public class SongController {
     }
 
     @PostMapping("/api/songs")
-    public Iterable<Song> addSong(@RequestBody Song songToAdd) {
+    public Iterable<Song> addNewSong(@RequestBody Song songToAdd) {
         songRepo.save(songToAdd);
         return songRepo.findAll();
     }
@@ -41,17 +39,17 @@ public class SongController {
         songRepo.save(songToChange);
         return songToChange;
     }
-
-    @DeleteMapping("/api/song/{id}")
-    public String deleteById(@PathVariable("id") Long id) {
-        return "Delete by id called";
-    }
     @PostMapping("/api/songs/{id}/ratings")
-    public Song songToAddRating (@RequestBody String newRatings, @PathVariable Long id){
-
+    public Song songToAddRating (@RequestBody double newRatings, @PathVariable Long id){
         Song songToAdd = songRepo.findById(id).get();
         songToAdd.addRatings(newRatings);
         songRepo.save(songToAdd);
         return songToAdd;
     }
+    @DeleteMapping("/api/song/{id}")
+    public String deleteById(@PathVariable("id") Long id) {
+        return "Delete by id called";
+    }
 }
+
+
