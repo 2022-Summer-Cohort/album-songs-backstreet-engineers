@@ -6,53 +6,64 @@
     justify-content: center;
     gap: 1rem;
 }
+
 /* MAIN CONTAINER */
 .mainContainer {
     display: flex;
     flex-direction: column;
 }
+
 /* TOP */
 .top {
     border-radius: 25px;
     background-color: bisque;
     margin: 1rem;
 }
+
 .albumReviews p {
-  max-width: min-content;
-  max-height: min-content;
-  text-align: justify;
+    max-width: min-content;
+    max-height: min-content;
+    text-align: justify;
 }
+
 .albumGroup {
     display: flex;
     flex-direction: row;
 }
+
 .albumPart1 {
     display: flex;
     flex-direction: column;
 }
+
 .albumPart2 {
     display: flex;
     flex-direction: column;
 }
+
 .albumPart3 {
     display: flex;
     flex-direction: column;
 }
+
 .rating {
     display: flex;
     flex-direction: row;
 }
+
 /* MIDDLE */
 /* BOTTOM */
 .songUserInputGroup {
     display: flex;
     flex-direction: row;
 }
+
 .songReviews p {
     max-width: min-content;
     max-height: min-content;
     text-align: justify;
-  }
+}
+
 /* FOOTER */
 footer {
     display: flex;
@@ -60,21 +71,22 @@ footer {
     justify-content: space-evenly;
     align-items: center;
 }
+
 .companyInfoGroup {
     display: flex;
     flex-direction: row;
     gap: .5rem;
 }
+
 .devs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .devProfiles {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    gap: 2rem;
 }
 
 .devLinks {
