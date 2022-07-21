@@ -1,0 +1,46 @@
+### Get all Albums
+GET http://localhost:8080/api/album
+Accept: application/json
+
+### Get an album with an ID
+GET http://localhost:8080/api/album/4
+Content-Type: application/json
+
+### Post a new Album resource.
+POST http://localhost:8080/api/album
+Content-Type: application/json
+
+{"title":"Soda Beats", 
+"imageUrl":"google.com",
+"recordLabel":"That Big One",
+"comments": ["Really Great!", "WOW", "so good"],
+"songs": [], "artists":[]}
+
+### Update an album's title property.
+PATCH http://localhost:8080/api/album/1/name
+
+Sooooodaaaaaa
+
+### Update album by ID's average rating
+POST http://localhost:8080/api/albums/1/avgRating
+Content-Type: aapplication/json 
+
+
+### Get all songs
+GET http://localhost:8080/api/songs
+Accept: application/json
+
+### Get an song with an ID
+GET http://localhost:8080/api/song/1
+Content-Type: application/json
+
+### Post a new song.
+POST http://localhost:8080/api/songs
+Content-Type: application/json
+
+{"title":"Somewhere over the Rainbow","duration": 4.15}
+
+### Update a song's title
+PATCH http://localhost:8080/api/song/1/name
+
+Survivor
