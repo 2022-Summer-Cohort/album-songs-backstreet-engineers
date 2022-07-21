@@ -20,8 +20,8 @@ public class AlbumController {
         this.songRepo = songRepo;
     }
 
-    @GetMapping("/api/album")
-    public Iterable<Album> retrieveAllAlbum() {
+    @GetMapping("/api/albums")
+    public Iterable<Album> retrieveAllAlbums() {
         return albumRepo.findAll();
     }
 
@@ -30,7 +30,7 @@ public class AlbumController {
         return albumRepo.findById(id).get();
     }
 
-    @PostMapping("/api/album")
+    @PostMapping("/api/album/new")
     public Iterable<Album> addAlbum(@RequestBody Album albumToAdd){
         albumRepo.save(albumToAdd);
         return albumRepo.findAll();
@@ -48,7 +48,7 @@ public class AlbumController {
         albumRepo.save(albumToChange);
         return albumToChange;
     }
-    @PostMapping("/api/albums/{id}/avgRating")
+    @PostMapping("/api/album/{id}/avgRating")
     public Album albumAvgRating (@PathVariable Long id) {
         Album albumToAdd = albumRepo.findById(id).get();
         albumToAdd.avgRating();
