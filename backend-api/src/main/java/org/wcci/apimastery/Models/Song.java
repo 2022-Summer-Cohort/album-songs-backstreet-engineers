@@ -1,6 +1,7 @@
 package org.wcci.apimastery.Models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
@@ -14,7 +15,7 @@ public class Song {
     @ManyToOne
     private Album album;
     @ElementCollection
-    private Collection<String> comments;
+    private Collection<Comment> comments;
     @ElementCollection
     private Collection<Double> ratings;
 
@@ -23,6 +24,8 @@ public class Song {
         this.artist = artist;
         this.duration = duration;
         this.album = album;
+        this.comments = new ArrayList<>();
+        this.ratings = new ArrayList<>();
     }
     public Song() {
     }
@@ -49,7 +52,7 @@ public class Song {
     public Album getAlbum() {
         return album;
     }
-    public Collection<String> getComments() {
+    public Collection<Comment> getComments() {
         return comments;
     }
 
@@ -57,10 +60,10 @@ public class Song {
         title = newTitle;
     }
 
-    public void addRatings(double newRatings) {
-        ratings.add(newRatings);
+    public void addRating(double newRating) {
+        ratings.add(newRating);
     }
-    public void addComment(String newComment){
+    public void addComment(Comment newComment){
         comments.add(newComment);
     }
 }
