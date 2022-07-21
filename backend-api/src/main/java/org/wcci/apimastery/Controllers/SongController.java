@@ -21,7 +21,7 @@ public class SongController {
         return songRepo.findAll();
     }
 
-    @GetMapping("/api/song/{id}")
+    @GetMapping("/api/songs/{id}")
     public Song retrieveSongById(@PathVariable Long id) {
         return songRepo.findById(id).get();
     }
@@ -32,7 +32,7 @@ public class SongController {
         return songRepo.findAll();
     }
 
-    @PatchMapping("/api/song/{id}/name")
+    @PatchMapping("/api/songs/{id}/name")
     public Song songToChangeTitle(@RequestBody String newTitle, @PathVariable Long id) {
         Song songToChange = songRepo.findById(id).get();
         songToChange.changeTitle(newTitle);
@@ -40,13 +40,13 @@ public class SongController {
         return songToChange;
     }
     @PostMapping("/api/songs/{id}/ratings")
-    public Song songToAddRating (@RequestBody double newRatings, @PathVariable Long id){
+    public Song songToAddRating (@RequestBody double newRating, @PathVariable Long id){
         Song songToAdd = songRepo.findById(id).get();
-        songToAdd.addRatings(newRatings);
+        songToAdd.addRating(newRating);
         songRepo.save(songToAdd);
         return songToAdd;
     }
-    @DeleteMapping("/api/song/{id}")
+    @DeleteMapping("/api/songs/{id}")
     public String deleteById(@PathVariable("id") Long id) {
         return "Delete by id called";
     }

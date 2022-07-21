@@ -1,5 +1,5 @@
 ### Get all Albums
-GET http://localhost:8080/api/album
+GET http://localhost:8080/api/albums
 Accept: application/json
 
 ### Get an album with an ID
@@ -7,7 +7,7 @@ GET http://localhost:8080/api/album/4
 Content-Type: application/json
 
 ### Post a new Album resource.
-POST http://localhost:8080/api/album
+POST http://localhost:8080/api/album/new
 Content-Type: application/json
 
 {"title":"Soda Beats", 
@@ -31,7 +31,7 @@ GET http://localhost:8080/api/songs
 Accept: application/json
 
 ### Get an song with an ID
-GET http://localhost:8080/api/song/1
+GET http://localhost:8080/api/songs/1
 Content-Type: application/json
 
 ### Post a new song.
@@ -41,6 +41,6 @@ Content-Type: application/json
 {"title":"Somewhere over the Rainbow","duration": 4.15}
 
 ### Update a song's title
-PATCH http://localhost:8080/api/song/1/name
+PATCH http://localhost:8080/api/songs/1/name
 
 Survivor
