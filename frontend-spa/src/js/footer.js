@@ -1,59 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soda Sound</title>
-    <link rel="stylesheet" href="/frontend-spa/css/style.css">
-    <link rel="stylesheet" href="/frontend-spa/css/layout.css">
-</head>
-
-<body>
-    <header class="topPage">
-        <div class="siteNameLogo">
-            <h1 class="siteName">Soda Sounds</h1>
-            <img src="/frontend-spa/images/sodaSoundLogo.png" class="siteLogo" alt="">
-        </div>
-        <div class="searchBar">
-            <!-- <label for="">Search</label> -->
-            <input type="search" placeholder="search for albums, songs & artists...">
-            <button type="submit">Search</button>
-        </div>
-    </header>
-    <div class="mainContainer">
-        <div class="jukeboxLeft">
-            <h3>Top 10 Artists</h3>
-            <ol>
-                <a href="">
-                    <li>Artist 1</li>
-                </a>
-            </ol>
-        </div>
-        <div class="jukeboxMiddle">
-            <div>
-                <img src="/frontend-spa/images/sodaSoundLogo.png" class="siteLogoHome" alt="">
-            </div>
-            <div class="selectedSongInfo">
-                <h3 class="topTenSongs">Top 10 Songs</h3>
-                <ul>
-                    <a href="">
-                        <li class="songsList">Song 1</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
-        <div class="jukeboxRight">
-            <h3>Top 10 Albums</h3>
-            <ol>
-                <a href="">
-                    <img src=""class="albumPicSide" alt="">
-                    <li>Album 1</li>
-                </a>
-            </ol>
-        </div>
-    </div>
-    <footer>
+export default function footer() {
+    return ` <footer>
         <a class="aboutUs" href="#popup1">About Us</a>
         <div id="popup1" class="overlay">
             <div class="popup">
@@ -182,7 +128,5 @@
             </div>
         </div>
     </footer>
-    <script src="/frontend-spa/src/js/app.js"></script>
-</body>
-
-</html>
+    ` 
+}
