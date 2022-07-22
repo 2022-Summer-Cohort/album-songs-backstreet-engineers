@@ -1,5 +1,7 @@
 package org.wcci.apimastery.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,6 +15,7 @@ public class Song {
     private String duration;
     private String artist;
     @ManyToOne
+    @JsonIgnore
     private Album album;
     @ElementCollection
     private Collection<Comment> comments;
