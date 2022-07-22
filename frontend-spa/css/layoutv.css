@@ -1,10 +1,28 @@
 /* HEADER */
-/* ANCHOR */
-.anchor {
+.topPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header {
+    padding:.5rem;
+}
+.siteName {
+    padding: 0;
+    margin: 0;
+}
+.siteNameLogo {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: .25rem;
+}
+/* FIX */
+.fix {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1rem;
+    margin-top: 1rem;
 }
 
 /* MAIN CONTAINER */
@@ -16,7 +34,6 @@
 /* TOP */
 .top {
     border-radius: 25px;
-    background-color: bisque;
     margin: 1rem;
 }
 
@@ -24,11 +41,16 @@
     max-width: min-content;
     max-height: min-content;
     text-align: justify;
+    margin: 1rem;
 }
 
 .albumGroup {
     display: flex;
     flex-direction: row;
+    padding: 1rem;
+    margin: .25rem;
+    gap: 1rem;
+
 }
 
 .albumPart1 {
@@ -52,16 +74,73 @@
 }
 
 /* MIDDLE */
+.middle {
+    display: flex;
+    flex-direction: column;
+}
+
+.trackListings ol {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+}
+
+.trackButton {
+    padding: .5rem;
+    margin: .25rem;
+}
+
 /* BOTTOM */
+.songPart1 {
+    padding: 1rem;
+    margin: .25rem; 
+}
+.songPart2 {
+    padding: 1rem;
+    margin: .25rem; 
+}
 .songUserInputGroup {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
+}
+.ratingCombo {
+    margin: 1rem;
 }
 
 .songReviews p {
     max-width: min-content;
     max-height: min-content;
     text-align: justify;
+    margin: 1rem;
+}
+
+/* DISPENSER */
+.dispense {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+}
+
+.dispenseOuter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dispenseInner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SIDE PANEL */
+.sidePanelBox {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 55px;
 }
 
 /* FOOTER */
@@ -76,6 +155,8 @@ footer {
     display: flex;
     flex-direction: row;
     gap: .5rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
 }
 
 .devs {
