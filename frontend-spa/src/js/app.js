@@ -1,8 +1,9 @@
-import album from "./album.js";
+import albumView from "./album2.js";
 import header from "./header.js";
 import footer from "./footer.js";
 import song from "./song.js";
 import home from "./home.js";
+import makeSong from "./song.js";
 
 const container = document.querySelector(".anchor");
 
@@ -22,16 +23,17 @@ function makeAlbumView(albumId) {
         .then(albumNumber => {
             console.log(albumNumber);
             container.innerHTML = header();
-            container.innerHTML += album(albumNumber);
+            container.innerHTML += albumView(albumNumber);
+            container.innerHTML+= makeSong();
             container.innerHTML += footer();
 
-            const songEl = document.querySelectorAll(".trackButton");
+            // const songEl = document.querySelectorAll(".trackButton");
 
-            songEl.forEach(song1 => {
-                song1.addEventListener("click",()=>{
-                   singleSongView(song1.id);
-                })
-            })
+            // songEl.forEach(song1 => {
+            //     song1.addEventListener("click",()=>{
+            //        singleSongView(song1.id);
+            //     })
+            // })
         })
 }
 
