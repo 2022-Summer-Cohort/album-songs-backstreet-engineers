@@ -1,4 +1,7 @@
-/* HEADER */
+body {
+    background-color: rgb(150, 214, 243);
+}
+
 * {
     text-decoration: none;
     list-style: none;
@@ -24,7 +27,17 @@ header h1 {
     width: 30px;
 }
 
+button {
+    background-color: darkcyan;
+    color: white;
+    padding: .25rem;
+    margin: .25rem;
+    border-radius: 3px;
+    border: none;
+}
+
 /* MAIN CONTAINER */
+
 .mainContainer {
     background-color: burlywood;
     border-top-left-radius: 25px;
@@ -32,6 +45,10 @@ header h1 {
 }
 
 /* TOP */
+.top {
+    background-color: bisque;
+}
+
 .albumPicMiddle {
     height: 150px;
     width: 150px;
@@ -42,34 +59,62 @@ header h1 {
     border-radius: 25px;
     background-color: brown;
     margin: 1rem;
+    padding: 1rem;
 }
 
-.trackListings ol {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto;
-    gap: 1rem;
-}
-
-.trackButton {
-    background-color: aqua;
+.middleHeading {
+    padding-bottom: 1rem;
 }
 
 .trackButton {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto;
-    gap: 1rem;
+    background-color: silver;
+    border-radius: 3px;
 }
 
 /* BOTTOM */
 .bottom {
     border-radius: 25px;
     background-color: bisque;
+    padding: 1rem;
     margin: 1rem;
 }
 
+.songPart1 {
+    background-color: darksalmon;
+    border-radius: 3px;
+}
+
 /* SIDE PANEL */
+.sidePanel {
+    background-color: brown;
+    border-radius: 5px;
+}
+
+.sidePanel button {
+    background-color: brown;
+    border: none;
+}
+
+/* DISPENSER */
+.dispenseOuter {
+    background-color: brown;
+    height: 150px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.dispenseInner {
+    background-color: bisque;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.dispenseLogo {
+    height: 50px;
+    width: 50px;
+}
+
 /* FOOTER */
 footer .navs {
     font-weight: bold;
@@ -155,6 +200,10 @@ footer {
 }
 
 /* OUR DEV TEAM */
+#popup2 {
+    overflow: auto;
+}
+
 .linkLogo {
     height: 20px;
     width: 20px;
@@ -167,11 +216,8 @@ footer {
 
 .teamList {
     text-align: center;
-    padding: 0;
-}
-
-.teamList {
     background-color: #f1f1f1;
+
 }
 
 .teamList li {
