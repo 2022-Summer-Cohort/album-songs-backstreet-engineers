@@ -17,6 +17,7 @@ public class Song {
     @ManyToOne
     @JsonIgnore
     private Album album;
+
     @ElementCollection
     private Collection<Comment> comments;
     @ElementCollection

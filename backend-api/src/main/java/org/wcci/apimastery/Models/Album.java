@@ -9,7 +9,7 @@ public class Album {
     @Id @GeneratedValue
     private long id;
     private String title;
-    @OneToMany(mappedBy="album")
+    @OneToMany(mappedBy="album", cascade= CascadeType.ALL,orphanRemoval = true)
     private Collection<Song> songs;
     private String artist;
     private String duration;
