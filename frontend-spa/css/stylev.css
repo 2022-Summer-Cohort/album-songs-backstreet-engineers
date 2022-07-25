@@ -26,11 +26,12 @@ header h1 {
     height: 30px;
     width: 30px;
 }
+
 button {
-    background-color:  darkcyan;
+    background-color: darkcyan;
     color: white;
     padding: .25rem;
-margin: .25rem;
+    margin: .25rem;
     border-radius: 3px;
     border: none;
 }
