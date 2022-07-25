@@ -24,7 +24,7 @@ function makeAlbumView(albumId) {
             console.log(albumNumber);
             container.innerHTML = header();
             container.innerHTML += albumView(albumNumber);
-            container.innerHTML+= makeSong();
+            // container.innerHTML += makeSong();
             container.innerHTML += footer();
 
             // const songEl = document.querySelectorAll(".trackButton");
@@ -38,6 +38,7 @@ function makeAlbumView(albumId) {
 }
 
 makeAlbumView(1);
+// makeSong();
 
 // function singleSongView(songId) {
 //     fetch(`http://localhost:8080/api/songs/${songId}`)

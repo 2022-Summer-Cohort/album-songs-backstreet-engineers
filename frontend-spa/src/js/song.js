@@ -1,8 +1,7 @@
 export default function makeSong (song) {
     return `
-   
-   
-    <div id="popup4" class="overlay">
+
+    <div id=${song.title} class="overlay">
         <div class="popup">
             <div class="songInfoGroup">
                 <h3>${song.title}</h3>
