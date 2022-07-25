@@ -2,10 +2,8 @@ export default function header() {
     return `
     <header class="topPage">
         <div class="siteNameLogo">
-        <a href="home();">
-            <h1 class="siteName">Soda Sounds</h1>
-            <img src="/frontend-spa/images/sodaSoundLogo.png" class="siteLogo" alt="">
-            </a>
+            <h1 class="siteName">Soda Sound</h1>
+            <img src="/images/sodaSoundLogo.png" class="siteLogo" alt="">
         </div>
         <div class="searchBar">
             <!-- <label for="">Search</label> -->
