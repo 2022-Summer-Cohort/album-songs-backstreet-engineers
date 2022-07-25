@@ -1,4 +1,4 @@
-export default function album(album, song) {
+export default function album() {
     return `
     <div class="mainContainer">
     <div class="top">

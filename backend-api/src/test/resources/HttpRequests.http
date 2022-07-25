@@ -44,3 +44,6 @@ Content-Type: application/json
 PATCH http://localhost:8080/api/songs/1/name
 
 Survivor
+### Delete an Album by id.
+Delete http://localhost:8080/api/album/1
+Content-Type: application/json
