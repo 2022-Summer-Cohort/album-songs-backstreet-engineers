@@ -46,6 +46,16 @@ function makeAlbumView(albumId) {
         
         
 }
+const deleteBtn= album.querySelector(".delete-button");
+deleteBtn.addEventListener("click", () =>{
+    fetch(`http://localhost8080/api/album/${albumId}`,{
+      method:'DELETE'  
+    })
+    .then(res => res.json())
+    .then(newAlbums =>{
+        makeHomeView(newAlbums);
+    })
+})
 makeHomeView();
 // makeAlbumView(1);
 
