@@ -98,8 +98,19 @@ button:hover {
     border-style: solid;
     border-radius: 25px;
 }
-
+.boxBottleHome img {
+    height: 200px;
+    width: auto;
+    border: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+}
 .boxBottle img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+.boxBottleHome img:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
@@ -198,6 +209,10 @@ button:hover {
     height: 200px;
     width: 200px;
 }
+.albumPicHome {
+    height: 150px;
+    width: 150px;
+}
 
 .test {
     position: static;
@@ -215,6 +230,19 @@ button:hover {
     background-color: darkcyan;
     height: 200px;
     width: 200px;
+    z-index: 0;
+    opacity: 0%;
+}
+.cardTextHome {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: darkcyan;
+    height: 150px;
+    width: 150px;
     z-index: 0;
     opacity: 0%;
 }
@@ -237,7 +265,18 @@ button:hover {
     z-index: 1;
     opacity: 95%;
 }
-
+.cardTextHome:hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: darkcyan;
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+    opacity: 95%;
+}
 .albumLeaveReview button {
     background-color: purple;
 }

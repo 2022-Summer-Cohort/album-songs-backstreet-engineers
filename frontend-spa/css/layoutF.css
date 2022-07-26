@@ -80,7 +80,12 @@ header {
 .cardText {
     display: flex;
     flex-direction: column;
-    gap: .25rem;
+    justify-content: space-around;
+}
+.cardTextHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .cardText ul li {
