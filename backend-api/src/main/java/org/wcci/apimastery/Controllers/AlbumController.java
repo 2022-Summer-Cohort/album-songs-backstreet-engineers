@@ -39,7 +39,7 @@ public class AlbumController {
 
     @DeleteMapping("/api/album/{id}")
     public Iterable <Album> deleteAlbumById(@PathVariable Long id) {
-        albumRepo.delete(albumRepo.findById(id).get());
+        albumRepo.deleteById(id);
         return albumRepo.findAll();
     }
 

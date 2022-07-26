@@ -64,11 +64,24 @@ function makeAlbumView(albumId) {
             } )
             
             })
+            const deleteBtn= document.querySelector(".delete-button");
+            const albumIdEl = document.querySelector(".album-id");
+    deleteBtn.addEventListener("click", () =>{
+    fetch(`http://localhost:8080/api/album/${albumIdEl.value}`,{
+      method:'DELETE'  
+    })
+    .then(res => res.json())
+    .then(newAlbums =>{
+        makeHomeView(newAlbums);
+    })
+    .catch(err => console.error(err))
+})
         })
         .catch(err => console.error(err))
         
         
 }
+
 makeHomeView();
 // makeAlbumView(1);
 

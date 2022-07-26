@@ -31,6 +31,7 @@ export default function homeView(albums) {
                                             <li>Label: ${album.recordLabel}</li>
                                             <li>${album.duration}</li>
                                         </ul>
+                                        
                                     </div>
                                 </div>
                             `
