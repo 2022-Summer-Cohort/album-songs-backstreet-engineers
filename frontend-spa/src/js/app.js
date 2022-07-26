@@ -41,6 +41,29 @@ function makeAlbumView(albumId) {
             goHomeBtn.addEventListener("click", ()=> {
                 makeHomeView();
             })
+            const commentAuthorIN = document.querySelector(".reviewName");
+            const commentContentIN = document.querySelector(".reviewContent");
+            const commentBtn = document.querySelector(".reviewSubmit");
+
+            commentBtn.addEventListener("click", ()=> {
+            const newCommentJson = {
+                "author" : commentAuthorIN.value, 
+                "content" : commentContentIN.value,
+            }    
+            fetch(`http://localhost:8080/api/album/${albumNumber.id}/addComment`,{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newCommentJson)
+        
+            })
+            .then(res => res.json())
+            .then(albumNumber => {
+                makeAlbumView(albumNumber.id);
+            } )
+            
+            })
         })
         .catch(err => console.error(err))
         

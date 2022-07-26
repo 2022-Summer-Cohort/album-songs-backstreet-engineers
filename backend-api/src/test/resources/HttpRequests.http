@@ -48,3 +48,9 @@ Survivor
 ### Delete Album by id.
 DELETE http://localhost:8080/api/album/1
 Content-Type: application/json
+
+### Post add album comment a new Album resource.
+POST http://localhost:8080/api/album/1/addComment
+Content-Type: application/json
+
+{"author":"Kevin", "content": "word"}
