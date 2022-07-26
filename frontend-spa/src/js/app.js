@@ -1,4 +1,4 @@
-import album from "./album.js";
+import albumView from "./album.js";
 import header from "./header.js";
 import footer from "./footer.js";
 import song from "./song.js";
@@ -24,20 +24,22 @@ function makeAlbumView(albumId) {
         .then(albumNumber => {
             console.log(albumNumber);
             container.innerHTML = header();
-            container.innerHTML += album(albumNumber);
+            container.innerHTML += albumView(albumNumber);
+            // container.innerHTML += makeSong();
             container.innerHTML += footer();
 
-            const songEl = document.querySelectorAll(".trackButton");
+            // const songEl = document.querySelectorAll(".trackButton");
 
-            songEl.forEach(song1 => {
-                song1.addEventListener("click",()=>{
-                   singleSongView(song1.id);
-                })
-            })
+            // songEl.forEach(song1 => {
+            //     song1.addEventListener("click",()=>{
+            //        singleSongView(song1.id);
+            //     })
+            // })
         })
 }
 
 makeAlbumView(1);
+// makeSong();
 
 // function singleSongView(songId) {
 //     fetch(`http://localhost:8080/api/songs/${songId}`)

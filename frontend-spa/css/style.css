@@ -1,55 +1,321 @@
 * {
- text-decoration: none;
- list-style: none;
- padding: 0;
- margin: 0;
- color: black;
- text-align: center;
- align-items: center;
- justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
+
 /* HEADER */
 header {
     background-color: whitesmoke;
 }
+
 header h1 {
-color: darkcyan;
+    color: darkcyan;
 }
+
 .siteLogo {
     height: 30px;
     width: 30px;
 }
-/* MAIN CONTAINER/JUKEBOX */
-.mainContainer {
-background-color: bisque;
-}
-/* JUKEBOX LEFT */
-.jukeboxLeft {
+
+button {
     background-color: darkcyan;
-}
-/* JUKEBOX MIDDLE */
-.jukeboxMiddle {
-    background-color: burlywood;
-}
-.siteLogoHome {
-    height: 150px;
-    width: 150px;
+    color: white;
+    padding: .25rem;
+    margin: .25rem;
+    border-radius: 3px;
+    border: none;
 }
 
-.albumPicMiddle {
-    height: 150px;
-    width: 150px;
-}
-
-.songTitle {
+button:hover {
     background-color: cyan;
 }
 
-/* JUKEBOX RIGHT */
-.jukeboxRight {
-    background-color: darkcyan;
+/* SODA MACHINE */
+/* SODA MACHINE LEFT */
+.logoNameCombo {
+    display: inline-block;
+    position: relative;
 }
-.albumPicSide {
+
+.logoNameCombo::before {
+    content: '';
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: purple;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+
+.logoNameCombo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 101%;
+    background: white;
+    left: -.1em;
+    right: -.1em;
+    z-index: -1;
+}
+
+.logoNameCombo img {
+    height: 100px;
+    width: 100px;
+}
+
+.logoNameCombo h1 {
+    color: darkcyan;
+    font-size: 100pt;
+    white-space: nowrap;
+}
+
+.sodaMachineLeft img {
+    align-items: flex-end;
+}
+
+/* SODA MACHINE MIDDLE */
+.sodaMachineMiddle {
+    margin-top: 1rem;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: burlywood;
+}
+
+.boxBottle img {
+    height: 275px;
+    width: auto;
+    border: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+}
+
+.boxBottle img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.albumGroup {
+    background-color: bisque;
+    border-radius: 25px;
+}
+
+.albumBox {
+    background-color: slategray;
+    border-radius: 25px;
+}
+
+.artistName {
+    color: white;
+    font-weight: normal;
+}
+
+/* ALBUM GROUP PART 1 */
+.albumName {
+    background-color: darkcyan;
+    border-radius: 25px;
+}
+
+.reviewPop {
+    background-color: darkcyan;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.reviewPop:hover {
+    background-color: cyan;
+}
+
+/* ALBUM GROUP PART 2 */
+.albumCard ul li {
+    color: white;
+}
+
+.albumRating h5 {
+    color: white;
+}
+
+.albumRating p {
+    color: white;
+}
+
+.albumPic {
+    height: 200px;
+    width: 200px;
+}
+
+.test {
+    position: static;
+    z-index: 1;
+    opacity: 100%;
+}
+
+.cardText {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: darkcyan;
+    height: 200px;
+    width: 200px;
+    z-index: 0;
+    opacity: 0%;
+}
+
+.test:hover {
+    position: static;
+    z-index: 0;
+    opacity: 0%;
+}
+
+.cardText:hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: darkcyan;
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    opacity: 95%;
+}
+
+.albumLeaveReview button {
+    background-color: purple;
+}
+
+/* ALBUM GROUP PART 3 */
+.otherAlbumPic {
+    height: 150px;
+    width: 150px;
+}
+
+.arrows {
+    height: 25px;
+    width: 25px;
+}
+
+/* TRACKLISTINGS */
+.trackListings {
+    border-radius: 25px;
+    background-color: brown;
+    margin: 1rem;
+    padding: 1rem;
+    width: 700px;
+}
+
+.trackButton {
+    background-color: slategray;
+    border-radius: 3px;
+}
+
+.trackButton:hover {
+    background-color: silver;
+}
+
+.songLeaveReview button {
+    background-color: purple;
+}
+
+/* SODA MACHINE RIGHT */
+.sidePanel button {
+    border-radius: 50%;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.sidePanel button:hover {
+    background-color: cyan;
+}
+
+.sidePanel {
+    background-color: slategray;
+    border-radius: 5px;
+}
+
+.sidePanel h4 {
+    background-color: whitesmoke;
+    border-radius: 3px;
+    color: black;
+    font-size: 22pt;
+    height: 40px;
+    width: 40px;
+}
+
+/* DISPENSER */
+.dispenseOuter {
+    background-color: brown;
+    height: 150px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.dispenseInner {
+    background-color: bisque;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.dispenseLogo {
     height: 50px;
     width: 50px;
 }
@@ -76,6 +342,7 @@ footer {
     height: 40px;
     width: 40px;
 }
+
 .content {
     color: black;
 }
@@ -107,6 +374,7 @@ footer {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
+    background-color: darkcyan;
     border-radius: 5px;
     width: 30%;
     position: relative;
@@ -138,23 +406,24 @@ footer {
 }
 
 /* OUR DEV TEAM */
+#popup2 {
+    overflow: auto;
+}
+
 .linkLogo {
     height: 20px;
     width: 20px;
 }
 
 .devPics {
-    height: 50px;
-    width: 50px;
+    height: 150px;
+    width: 150px;
 }
 
 .teamList {
     text-align: center;
-    padding: 0;
-}
-
-.teamList {
     background-color: #f1f1f1;
+
 }
 
 .teamList li {

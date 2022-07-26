@@ -8,7 +8,8 @@ export default function footer() {
                 <h2>Soda Sound</h2>
             </div>
             <a class="close" href="#">&times;</a>
-            <div class="content">Our company was founded in 1912. The settlers disliked our soda so we decided to do
+            <div class="content">Our company was founded in 1912. The settlers disliked our soda so we decided
+                to do
                 what we do best and switched over to music file management!
             </div>
         </div>
@@ -24,7 +25,6 @@ export default function footer() {
             <a class="close" href="#">&times;</a>
             <div class="content2">
                 <ul class="teamList">
-
                     <li>
                         <div class="devs">
                             <div class="devs1">
@@ -108,7 +108,6 @@ export default function footer() {
                             </div>
                         </div>
                     </li>
-                    </li>
                     <hr>
                     <li>
                         <div class="devs">
@@ -136,7 +135,6 @@ export default function footer() {
                                 </div>
                             </div>
                         </div>
-                    </li>
                     </li>
                 </ul>
             </div>
