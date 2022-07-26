@@ -41,6 +41,8 @@ export default function albumView(album) {
                             <h4 class="reviewPop">Reviews</h4>
                         </a>
                     </div>
+                    <button type="button" style="font-size:24px" class="delete-button">&#xf014; Delete</button>
+                    <input class = "album-id" type="hidden" value="${album.id}">
                 </div>
                 <div id="popup3" class="overlay">
                     <div class="popup">

@@ -31,7 +31,7 @@ export default function homeView(albums) {
                                             <li>Label: ${album.recordLabel}</li>
                                             <li>${album.duration}</li>
                                         </ul>
-                                        <i style="font-size:24px" class="delete-button">&#xf014;</i>
+                                        
                                     </div>
                                 </div>
                             `
