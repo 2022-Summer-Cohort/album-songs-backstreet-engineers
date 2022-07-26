@@ -39,7 +39,7 @@ public class Populator implements CommandLineRunner {
         songRepo.save(song9); songRepo.save(song10); songRepo.save(song11);
         albumRepo.save(album1);
 
-        Album album2 = new Album("Paper Castle", "Joe Hertler & The Rainbow Seekers", "52 min, 1 sec","paperCastleCover", "AntiFragile Music");
+        Album album2 = new Album("Paper Castle", "Joe Hertler & The Rainbow Seekers", "52 min, 1 sec","/images/paperCastleCover.jpg", "AntiFragile Music");
         albumRepo.save(album2);
         Song song12 = new Song("Underwater", "Joe Hertler & The Rainbow Seekers", "5:23", album2);
         Song song13 = new Song("Loser", "Joe Hertler & The Rainbow Seekers", "3:45", album2);
@@ -57,7 +57,7 @@ public class Populator implements CommandLineRunner {
         songRepo.save(song18);songRepo.save(song19);songRepo.save(song20);songRepo.save(song21);songRepo.save(song22);songRepo.save(song23);
         albumRepo.save(album2);
 
-        Album album3 = new Album("Heroes", "David Bowie", "40 min, 44 sec", "bowieCover", "RCA Records");
+        Album album3 = new Album("Heroes", "David Bowie", "40 min, 44 sec", "/images/heroesCover.jpg", "RCA Records");
         albumRepo.save(album3);
         Song song32 = new Song("Beauty and the Beast", "David Bowie", "3:36", album3);
         Song song33 = new Song("Joe the Lion", "David Bowie", "3:08", album3);

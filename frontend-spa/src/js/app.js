@@ -1,7 +1,6 @@
-import albumView from "./album2.js";
+import albumView from "./album.js";
 import header from "./header.js";
 import footer from "./footer.js";
-import song from "./song.js";
 import home from "./home.js";
 import makeSong from "./song.js";
 
