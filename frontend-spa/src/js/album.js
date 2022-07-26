@@ -62,9 +62,9 @@ export default function albumView(album) {
     }).join("")
         }
                             <div class="albumLeaveReview">
-                                <input type="text" placeholder="reviewer's name">
-                                <input type="text" placeholder="write a review...">
-                                <button type="submit">Submit</button>
+                              <input class="reviewName" type="text" placeholder="reviewer's name">
+                              <input class="reviewContent" type="text" placeholder="write a review...">
+                                <button class="reviewSubmit" type="submit">Submit</button>
                             </div>
                         </div>
                     </div>

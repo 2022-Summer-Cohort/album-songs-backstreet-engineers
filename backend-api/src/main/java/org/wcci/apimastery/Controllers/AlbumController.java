@@ -1,6 +1,7 @@
 package org.wcci.apimastery.Controllers;
 
 import org.wcci.apimastery.Models.Album;
+import org.wcci.apimastery.Models.Comment;
 import org.wcci.apimastery.Repos.AlbumRepo;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -56,4 +57,13 @@ public class AlbumController {
         albumRepo.save(albumToAdd);
         return albumToAdd;
     }
-}
+
+        @PostMapping("/api/album/{id}/addComment")
+        public Album albumToAddCommentTo(@RequestBody Comment newComment, @PathVariable Long id) {
+            Album albumToChange = albumRepo.findById(id).get();
+            albumToChange.addComments(newComment);
+            albumRepo.save(albumToChange);
+            return albumToChange;
+        }
+
+    }
