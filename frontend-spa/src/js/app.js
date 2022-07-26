@@ -1,12 +1,14 @@
 import albumView from "./album.js";
 import header from "./header.js";
 import footer from "./footer.js";
-import home from "./home.js";
-import makeSong from "./song.js";
+import song from "./song.js";
+import homeView from "./home.js";
 
 const container = document.querySelector(".anchor");
 
-
+function makeHomeView(){
+    
+}
 function singleSongView(songId) {
     fetch(`http://localhost:8080/api/songs/${songId}`)
         .then(res => res.json())

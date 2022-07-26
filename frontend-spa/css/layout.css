@@ -20,6 +20,55 @@ header {
     flex-direction: row-reverse;
     gap: .25rem;
 }
+/*home page stuffs */
+
+.cardTextHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.boxBottleHome img {
+    height: 200px;
+    width: auto;
+    border: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+}
+.boxBottleHome img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+.albumPicHome {
+    height: 150px;
+    width: 150px;
+}
+.cardTextHome {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: darkcyan;
+    height: 150px;
+    width: 150px;
+    z-index: 0;
+    opacity: 0%;
+}
+.cardTextHome:hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: darkcyan;
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+    opacity: 95%;
+}
+
 
 /* BACKGROUND STRUCTURE */
 /* SODA MACHINE */
