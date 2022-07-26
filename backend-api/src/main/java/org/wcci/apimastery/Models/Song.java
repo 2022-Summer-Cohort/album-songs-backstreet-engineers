@@ -22,6 +22,7 @@ public class Song {
     private Collection<Comment> comments;
     @ElementCollection
     private Collection<Double> ratings;
+    private double avgRating;
 
     public Song(String title, String artist,  String duration, Album album){
         this.title = title;
@@ -37,13 +38,11 @@ public class Song {
     public Collection<Double> getRatings() {
         return ratings;
     }
-    public double avgRating(){
-        double sum = 0;
-        for (double rating: ratings){
-            sum += rating;
-        }
-        return sum/ratings.size();
+    public double getAvgRating(){
+        avgRating = avgRating();
+        return avgRating;
     }
+
     public long getId() {
         return id;
     }
@@ -63,7 +62,13 @@ public class Song {
     public void changeTitle(String newTitle){
         title = newTitle;
     }
-
+    public double avgRating(){
+        double sum = 0;
+        for (double rating: ratings){
+            sum += rating;
+        }
+        return sum/ratings.size();
+    }
     public void addRating(double newRating) {
         ratings.add(newRating);
     }

@@ -44,6 +44,7 @@ public class Album {
         return imageUrl;
     }
     public double getAvgRating() {
+        avgRating = avgRating();
         return avgRating;
     }
     public String getRecordLabel() {
@@ -71,11 +72,11 @@ public class Album {
         comments.add(newComment);
     }
 
-    public void avgRating() {
+    public double avgRating() {
         double sum = 0;
         for (Song song: songs) {
             sum += song.avgRating();
         }
-        avgRating = sum / songs.size();
+        return (sum / songs.size());
     }
 }

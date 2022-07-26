@@ -96,7 +96,7 @@ ${album.songs.map(song => {
                     <li class="songRating">
                         <h5>Rating</h5>
                         <div>
-                            <p class="rating1">${song.rating}</p>
+                            <p class="rating1">${song.avgRating}</p>
                             <p class="rating2">/</p>
                             <p class="rating3">5</p>
                         </div>

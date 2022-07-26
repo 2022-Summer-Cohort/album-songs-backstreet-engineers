@@ -319,7 +319,10 @@ button:hover {
     height: 50px;
     width: 50px;
 }
-
+/* inputs */
+.new-album-input input{
+    color: black;
+}
 /* FOOTER */
 footer .navs {
     font-weight: bold;
@@ -436,3 +439,4 @@ footer {
 .teamList li:hover {
     background-color: #ccc
 }
+
