@@ -22,7 +22,7 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Album album1 = new Album("Bad", "Michael Jackson", "48 min, 40 sec", "badCover","Epic CBS");
+        Album album1 = new Album("Bad", "Michael Jackson", "48 min, 40 sec", "/images/badCover.jpg","Epic CBS");
         albumRepo.save(album1);
         Song song1 = new Song("Bad", "Michael Jackson", "4:07", album1);
         Song song2 = new Song("The Way You Make Me Feel", "Michael Jackson", "4:58", album1 );

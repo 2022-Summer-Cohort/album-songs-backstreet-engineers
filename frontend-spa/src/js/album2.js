@@ -82,6 +82,11 @@ export default function albumView(album) {
             </a>
         </div>
     </ol>
+    `
+}).join("")
+}
+${album.songs.map(song => {
+    return `
 <div id="${song.title}" class="overlay">
         <div class="popup">
             <div class="songInfoGroup">
