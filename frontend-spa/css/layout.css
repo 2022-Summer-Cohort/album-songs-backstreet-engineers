@@ -27,6 +27,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
 }
+
 .boxBottleHome img {
     height: 200px;
     width: auto;
@@ -35,14 +36,17 @@ header {
     border-style: solid;
     border-radius: 25px; */
 }
+
 .boxBottleHome img:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
+
 .albumPicHome {
     height: 150px;
     width: 150px;
 }
+
 .cardTextHome {
     display: block;
     position: absolute;
@@ -56,6 +60,7 @@ header {
     z-index: 0;
     opacity: 0%;
 }
+
 .cardTextHome:hover {
     position: absolute;
     top: 0;
@@ -68,15 +73,18 @@ header {
     z-index: 1;
     opacity: 95%;
 }
+
 .addNewAlbum {
     padding: 1rem;
 }
+
 .new-album-input {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto;
     gap: .25rem;
 }
+
 /* BACKGROUND STRUCTURE */
 /* SODA MACHINE */
 .sodaMachine {
@@ -158,22 +166,27 @@ header {
     flex-direction: column;
     gap: 1rem;
 }
+
 .content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
+
 .content p {
     color: goldenrod;
 }
+
 .content h5 {
     font-style: italic;
 
 }
+
 .content li:hover {
     background-color: rgb(19, 173, 173);
 
 }
+
 /* ALBUM GROUP PART 2 */
 .albumGroupPart2 {
     display: flex;
@@ -183,6 +196,23 @@ header {
 }
 
 /* TRACKLISTINGS */
+.addSongHeadingCombo {
+    display: flex;
+    flex-direction: row;
+    gap: .3rem;
+}
+
+.inputStyle {
+    display: flex;
+    flex-direction: column;
+}
+
+.addSongInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .trackListings {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -196,50 +226,61 @@ header {
     padding: .5rem;
     margin: .25rem;
 }
+
 .songInfoGroup {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
+
 .songRating {
     display: flex;
     flex-direction: column;
     gap: .25rem;
 }
+
 .songRatingCombo {
     display: flex;
     flex-direction: row;
 }
+
 .songLeaveReview {
     padding-top: 2rem;
 
 }
+
 .songFix {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding-top: 1rem;
 }
+
 .songFix p {
     color: goldenrod;
 }
+
 .songFix h5 {
     font-style: italic;
 
 }
+
 .songFix li:hover {
     background-color: rgb(19, 173, 173);
 
 }
+
 .bigSongTitle {
     font-weight: 100pt;
 }
+
 /* SIDE PANEL */
 .sidePanel {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
+
 /* DISPENSER */
 .dispense {
     display: flex;
@@ -258,9 +299,10 @@ header {
     align-items: center;
     justify-content: center;
 }
+
 .notes {
-display: flex;
-flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 /* SODA MACHINE RIGHT */
