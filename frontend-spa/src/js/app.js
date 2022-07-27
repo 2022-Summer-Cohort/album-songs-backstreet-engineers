@@ -115,11 +115,9 @@ function makeAlbumView(albumId) {
             addSongBtn.addEventListener("click", () => {
                 const newSongJson = {
                     "title": songTitleIN.value,
-                    "duration": songDurationtIN.value,
-                    "artist": albumNumber.artist,
-                    "album": albumIdEl.value,                 
+                    "duration": songDurationtIN.value,              
                 }
-                fetch(`http://localhost:8080/api/album/${albumNumber.id}/newsong`, {
+                fetch(`http://localhost:8080/api/album/${albumIdEl.value}/newsong`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -129,7 +127,7 @@ function makeAlbumView(albumId) {
                 })
                     .then(res => res.json())
                     .then(updateAlbum => {
-                        makeHomeView(updateAlbum);
+                        makeAlbumView(updateAlbum.id);
                     })
 
             })
