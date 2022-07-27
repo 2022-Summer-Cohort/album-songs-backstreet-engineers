@@ -55,3 +55,9 @@ POST http://localhost:8080/api/album/1/addComment
 Content-Type: application/json
 
 {"author":"Kevin", "content": "word"}
+
+### Add comment to Song.
+POST http://localhost:8080/api/song/2/addComment
+Content-Type: application/json
+
+{"author":"Kevin", "content": "word"}

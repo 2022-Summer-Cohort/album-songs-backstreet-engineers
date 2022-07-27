@@ -319,7 +319,11 @@ button:hover {
     padding: 1rem;
     width: 700px;
 }
-
+.songPopup {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
 .trackButton {
     background-color: slategray;
     border-radius: 3px;
