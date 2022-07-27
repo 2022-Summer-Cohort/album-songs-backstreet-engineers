@@ -1,5 +1,6 @@
 export default function homeView(albums) {
     return `
+    <section class="backgroundStructure">
     <section class="sodaMachine">
             <!-- LOGO/SITE NAME OR SODA BOTTLE IMAGE -->
             <section class="sodaMachineLeft">
@@ -38,32 +39,51 @@ export default function homeView(albums) {
                             }).join("")
                         }
                 </section>
-                <section class="new-album-input">
-                    <h3>Add New Album:</h3>
-                    <label>Album Title:</label><input type="text" name="album-title" id="">
-                    <label>Album Artist:</label><input type="text" name="album-artist" id="">
-                    <label>Album Duration:</label><input type="text" name="album-duration" id="">
-                    <label>Album Cover Image:</label><input type="text" name="album-img" id="">
-                    <label>Record Label:</label><input type="text" name="album-record-label" id="">
-                    <button type="submit">Submit</button>
-                </section>
-            
-                
-                <section class="dispenser">
-                    <div class="dispenseOuter">
-                        <div class="dispenseInner">
-                            <img src="/images/sodaSoundLogo.png" class="dispenseLogo" alt="">
-                        </div>
+                <section class="addNewAlbum">
+                    <h3>Add A New Album</h3>
+                    <div class="new-album-input">
+                        <label>Album Title:</label>
+                        <label>Album Artist:</label>
+                        <label>Album Duration:</label>
+                        <!-- <label></label>
+                        <label></label>
+                        <label></label> -->
+                        <input type="text" name="album-title" placeholder="Album Title" id="">
+                        <input type="text" name="album-artist" placeholder="Album Artist" id="">
+                        <input type="text" name="album-duration" placeholder="Album Duration" id="">
+                        <label>Record Label:</label>
+                        <label>Album Cover Image:</label>
+                        <label></label>
+                        <!-- <label></label>
+                        <label></label>
+                        <label></label> -->
+                        <input type="text" name="album-record-label" placeholder="Record Label" id="">
+                        <input type="file" name="album-img" placeholder="Album Title" id="">
+                        <button type="submit">Submit</button>
                     </div>
                 </section>
-            </section>
-            <!-- SIDEPANEL/COIN SLOT/SELECTION AREA  -->
-            <section class="sodaMachineRight">
-                <div class="sidePanel">
-                    <h4>A1</h4>
-                    <button disabled="disabled">GO</button>
+                <section class="dispenser">
+                <div class="dispenseOuter">
+                    <div class="dispenseInner">
+                        <!-- <img src="/images/sodaSoundLogo.png" class="dispenseLogo" alt=""> -->
+                    </div>
+                </div>
+                <div class="notes">
+                    <img class="note" src="/images/quarterNote.png" alt="">
+                    <img class="note" src="/images/wholeNote.png" alt="">
+                    <img class="note" src="/images/doubleNote.png" alt="">
+                    <img class="note" src="/images/clefNote.png" alt="">
+                    <img class="note" src="/images/treble.png" alt="">
                 </div>
             </section>
+        </section>
+        <!-- SIDEPANEL/COIN SLOT/SELECTION AREA  -->
+        <section class="sodaMachineRight">
+            <div class="sidePanel">
+                <h4>A1</h4>
+                <button disabled="disabled">GO</button>
+            </div>
+        </section>
         </section>
     `
 }

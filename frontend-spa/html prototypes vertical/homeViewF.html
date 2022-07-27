@@ -17,13 +17,13 @@
                 <h1 class="siteName">Soda Sound</h1>
                 <img src="/images/sodaSoundLogo.png" class="siteLogo" alt="">
             </div>
-            <div class="searchBar">
-                <!-- <label for="">Search</label> -->
+            <!-- <div class="searchBar">
+                <label for="">Search</label>
                 <input type="search" placeholder="search for albums, songs & artists...">
                 <button type="submit">Search</button>
-            </div>
+            </div> -->
         </header>
-        
+
         <section class="sodaMachine">
             <!-- LOGO/SITE NAME OR SODA BOTTLE IMAGE -->
             <section class="sodaMachineLeft">
@@ -39,11 +39,13 @@
                     <div class="albumGroupPart2">
                         <div class="albumBox">
                             <div class="boxBottleHome">
-                                <img src="/images/sodaSoundLogo bottle only cropped.png" alt="Vector image of colored soda bottle">
+                                <img src="/images/sodaSoundLogo bottle only cropped.png"
+                                    alt="Vector image of colored soda bottle">
                             </div>
                             <div class="albumCard">
                                 <div class="test">
-                                    <img src="/images/badCover.jpg" class="albumPicHome" alt="Michael Jackson's Bad album cover">
+                                    <img src="/images/badCover.jpg" class="albumPicHome"
+                                        alt="Michael Jackson's Bad album cover">
                                 </div>
                                 <div class="cardTextHome">
                                     <ul>
@@ -55,7 +57,8 @@
                                 </div>
                             </div>
                             <div class="boxBottleHome">
-                                <img src="/images/sodaSoundLogo bottle only cropped_altColor1.png" alt="Vector image of colored soda bottle">
+                                <img src="/images/sodaSoundLogo bottle only cropped_altColor1.png"
+                                    alt="Vector image of colored soda bottle">
                             </div>
                             <div class="albumCard">
                                 <div class="test">
@@ -71,7 +74,8 @@
                                 </div>
                             </div>
                             <div class="boxBottleHome">
-                                <img src="/images/sodaSoundLogo bottle only cropped_altColor2.png" alt="Vector image of colored soda bottle">
+                                <img src="/images/sodaSoundLogo bottle only cropped_altColor2.png"
+                                    alt="Vector image of colored soda bottle">
                             </div>
                             <div class="albumCard">
                                 <div class="test">
@@ -87,18 +91,29 @@
                                 </div>
                             </div>
                 </section>
-                <section class="new-album-input">
-                    <h3>Add New Album:</h3>
-                    <label>Album Title:</label><input type="text" name="album-title" id="">
-                    <label>Album Artist:</label><input type="text" name="album-artist" id="">
-                    <label>Album Duration:</label><input type="text" name="album-duration" id="">
-                    <label>Album Cover Image:</label><input type="text" name="album-img" id="">
-                    <label>Record Label:</label><input type="text" name="album-record-label" id="">
-                    <button type="submit">Submit</button>
+                <section class="addNewAlbum">
+                    <h3>Add A New Album</h3>
+                    <div class="new-album-input">
+                        <label>Album Title:</label>
+                        <label>Album Artist:</label>
+                        <label>Album Duration:</label>
+                        <!-- <label></label>
+                        <label></label>
+                        <label></label> -->
+                        <input type="text" name="album-title" placeholder="Album Title" id="">
+                        <input type="text" name="album-artist" placeholder="Album Artist" id="">
+                        <input type="text" name="album-duration" placeholder="Album Duration" id="">
+                        <label>Record Label:</label>
+                        <label>Album Cover Image:</label>
+                        <label></label>
+                        <!-- <label></label>
+                        <label></label>
+                        <label></label> -->
+                        <input type="text" name="album-record-label" placeholder="Record Label" id="">
+                        <input type="file" name="album-img" placeholder="Album Title" id="">
+                        <button type="submit">Submit</button>
+                    </div>
                 </section>
-                
-
-
                 <section class="dispenser">
                     <div class="dispenseOuter">
                         <div class="dispenseInner">
@@ -260,7 +275,7 @@
             </div>
         </footer>
     </div>
-    <script src="/src/js/app.js" type="module"></script>
+    <!-- <script src="/src/js/app.js" type="module"></script> -->
 </body>
 
 </html>
