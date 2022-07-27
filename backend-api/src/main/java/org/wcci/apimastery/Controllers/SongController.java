@@ -1,5 +1,6 @@
 package org.wcci.apimastery.Controllers;
 
+import org.wcci.apimastery.Models.Album;
 import org.wcci.apimastery.Models.Song;
 import org.wcci.apimastery.Repos.AlbumRepo;
 import org.wcci.apimastery.Repos.SongRepo;
@@ -26,10 +27,12 @@ public class SongController {
         return songRepo.findById(id).get();
     }
 
-    @PostMapping("/api/songs")
-    public Iterable<Song> addNewSong(@RequestBody Song songToAdd) {
+    @PostMapping("/api/album/{id}/newsong")
+    public Album addNewSong(@RequestBody Song songToAdd, @PathVariable Long id) {
+        Album addSongTo = albumRepo.findById(id).get();
         songRepo.save(songToAdd);
-        return songRepo.findAll();
+        albumRepo.save(addSongTo);
+        return addSongTo;
     }
 
     @PatchMapping("/api/songs/{id}/name")

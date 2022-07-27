@@ -22,7 +22,39 @@ function makeHomeView() {
                     makeAlbumView(albumIdEl.value);
                 })
             })
+            const albumTitleIN = document.querySelector("#album-title");
+            const albumArtistIN = document.querySelector("#album-artist");
+            const albumDurationIN = document.querySelector("#album-duration");
+            const albumRecordLabelIN = document.querySelector("#album-record-label");
+            const albumImageIN = document.querySelector("#album-img");
+            const addAlbumBtn = document.querySelector(".addAlbumBtn");
+
+
+            addAlbumBtn.addEventListener("click", () => {
+                const newAlbumJson = {
+                    "title": albumTitleIN.value,
+                    "artist": albumArtistIN.value,
+                    "duration": albumDurationIN.value,
+                    "recordLabel": albumRecordLabelIN.value,
+                    "imageUrl": albumImageIN.value,
+                }
+                fetch(`http://localhost:8080/api/album/new`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(newAlbumJson)
+
+                })
+                    .then(res => res.json())
+                    .then(newAlbums => {
+                        makeHomeView(newAlbums);
+                    })
+
+            })
+                
         })
+        .catch(err => console.error(err))
 
 
 }
@@ -75,6 +107,31 @@ function makeAlbumView(albumId) {
                         makeHomeView(newAlbums);
                     })
                     .catch(err => console.error(err))
+            })
+            const songTitleIN = document.querySelector("#song-title");
+            const songDurationtIN = document.querySelector("#song-duration");
+            const addSongBtn = document.querySelector(".addSongBtn")
+
+            addSongBtn.addEventListener("click", () => {
+                const newSongJson = {
+                    "title": songTitleIN.value,
+                    "duration": songDurationtIN.value,
+                    "artist": albumNumber.artist,
+                    "album": albumIdEl.value,                 
+                }
+                fetch(`http://localhost:8080/api/album/${albumNumber.id}/newsong`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(newSongJson)
+
+                })
+                    .then(res => res.json())
+                    .then(updateAlbum => {
+                        makeHomeView(updateAlbum);
+                    })
+
             })
         })
         .catch(err => console.error(err))
