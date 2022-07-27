@@ -8,9 +8,11 @@
     align-items: center;
     justify-content: center;
 }
+
 input {
     color: black;
 }
+
 /* HEADER */
 header {
     background-color: whitesmoke;
@@ -38,6 +40,22 @@ button:hover {
     background-color: cyan;
 }
 
+/* BACKGROUND STRUCTURE */
+.backgroundStructure {
+    background-image: url(/images/bubble.svg), url(/images/bubble.svg);
+    background-size: 10%, 13%;
+    background-repeat: space;
+    background-clip: content-box;
+    background-color: rgb(32, 154, 211);
+}
+
+/* .backgroundStructure {
+    background-image: url(/images/sodaSound\ bubble&Text.svg), url(/images/bubble.svg);
+    background-size: 100px 100px, 10%;
+    background-repeat: space, space;
+    background-clip: content-box;
+    background-color: rgb(32, 154, 211);
+} */
 /* SODA MACHINE */
 /* SODA MACHINE LEFT */
 .logoNameCombo {
@@ -84,6 +102,32 @@ button:hover {
     align-items: flex-end;
 }
 
+.sodaMachineLeft img {
+    animation: bounce 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
 /* SODA MACHINE MIDDLE */
 .sodaMachineMiddle {
     margin-top: 1rem;
@@ -95,10 +139,10 @@ button:hover {
 .boxBottle img {
     height: 275px;
     width: auto;
-    border: white;
+    /* border: rgb(129, 124, 124);
     border-width: 1px;
     border-style: solid;
-    border-radius: 25px;
+    border-radius: 25px; */
 }
 
 .boxBottle img:hover {
@@ -183,6 +227,19 @@ button:hover {
     background-color: cyan;
 }
 
+.trashcan {
+    height: 25px;
+    width: auto;
+}
+
+.delete-button {
+    background-color: slategray;
+}
+
+.delete-button:hover {
+    background-color: rgb(187, 17, 17);
+}
+
 /* ALBUM GROUP PART 2 */
 .albumCard ul li {
     color: white;
@@ -244,17 +301,6 @@ button:hover {
     background-color: purple;
 }
 
-/* ALBUM GROUP PART 3 */
-.otherAlbumPic {
-    height: 150px;
-    width: 150px;
-}
-
-.arrows {
-    height: 25px;
-    width: 25px;
-}
-
 /* TRACKLISTINGS */
 .trackListings {
     border-radius: 25px;
@@ -303,28 +349,94 @@ button:hover {
 }
 
 /* DISPENSER */
+.dispenser {
+    background-color: black;
+    height: 150px;
+    width: 350px;
+    border-radius: 5px;
+    margin: 3rem;
+}
 .dispenseOuter {
     background-color: brown;
     height: 150px;
     width: 350px;
     border-radius: 5px;
+    animation: blinks 3s linear infinite;
 }
 
 .dispenseInner {
     background-color: bisque;
-    height: 100px;
-    width: 300px;
+    height: 125px;
+    width: 325px;
     border-radius: 5px;
+    animation: blinks 3s linear infinite;
+}
+
+@keyframes blinks {
+    50% {
+        opacity: 0;
+    }
 }
 
 .dispenseLogo {
     height: 50px;
     width: 50px;
 }
-/* inputs */
-.new-album-input input{
+
+.note {
+    height: 9%;
+    width: 9%;
+}
+
+.notes {
+    animation: fly 5s linear infinite;
+    bottom: 25px;
+    right: -200px;
+    position: sticky;
+    z-index: 999;
+    pointer-events: none;
+}
+
+@keyframes fly {
+
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-150px);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(100px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(150px);
+        opacity: 1;
+    }
+}
+
+/* HOME PAGE STUFF */
+.addNewAlbum {
+    background-color: brown;
+    border-radius: 25px;
+}
+
+.addNewAlbum input {
+    background-color: slategray;
+    border-radius: 3px;
+    /* border: none; */
+    color: white;
+}
+
+.addNewAlbum input::placeholder {
     color: black;
 }
+
 /* FOOTER */
 footer .navs {
     font-weight: bold;
@@ -385,6 +497,7 @@ footer {
     position: relative;
     transition: all 0.5s ease-in-out;
     text-align: center;
+    overflow: auto;
 }
 
 .popup h2 {
@@ -410,9 +523,21 @@ footer {
     color: goldenrod;
 }
 
+#popup1 h2 {
+    color: white;
+}
+
+#popup1 .content {
+    color: white;
+}
+
 /* OUR DEV TEAM */
 #popup2 {
     overflow: auto;
+}
+
+#popup2 h2 {
+    color: white;
 }
 
 .linkLogo {
@@ -427,8 +552,7 @@ footer {
 
 .teamList {
     text-align: center;
-    background-color: #f1f1f1;
-
+    background-color: darkcyan
 }
 
 .teamList li {
@@ -439,6 +563,5 @@ footer {
 }
 
 .teamList li:hover {
-    background-color: #ccc
+    background-color: rgb(8, 102, 102);
 }
-
