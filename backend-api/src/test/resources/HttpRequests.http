@@ -10,11 +10,12 @@ Content-Type: application/json
 POST http://localhost:8080/api/album/new
 Content-Type: application/json
 
-{"title":"Soda Beats", 
-"imageUrl":"google.com",
+{"title":"Soda Beats",
+"artist": "Grandpa",
+"duration": "55 minutes",
 "recordLabel":"That Big One",
-"comments": ["Really Great!", "WOW", "so good"],
-"songs": [], "artists":[]}
+"imageUrl":"/images/badCover.jpg"
+}
 
 ### Update an album's title property.
 PATCH http://localhost:8080/api/album/1/name

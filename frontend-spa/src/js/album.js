@@ -109,14 +109,13 @@ export default function albumView(album) {
                             <div class="addSongInputs">
                                 <div class="inputStyle">
                                     <label for="">Song Title</label>
-                                    <input type="text" placeholder="add song title...">
+                                    <input type="text" placeholder="add song title..." id="song-title">
                                 </div>
                                 <div class="inputStyle">
                                     <label for="">Song Duration</label>
-                                    <input type="number" placeholder="can include decimals..." name="" id="" min="0"
-                                        max="" step="any">
+                                    <input type="text" placeholder="can include decimals..." name="" id="song-duration">
                                 </div>
-                                <button>Submit</button>
+                                <button class="addSongBtn">Submit</button>
                             </div>
                         </div>
                     </div>

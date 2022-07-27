@@ -13,10 +13,11 @@ export default function homeView(albums) {
                             <h2 class="albumName">Select an Album:</h2>
                         </div>
                     </div>
-                    <div class="albumGroupPart2">
-                        <div class="albumBox">
+                    <div class="albumGroupPart2Home">
+                        
                         ${albums.map(album=>{
                             return `
+                            <div class="albumBoxHome">
                                 <div class="boxBottleHome">
                                     <img src="/images/sodaSoundLogo bottle only cropped.png" alt="Vector image of colored soda bottle">
                                 </div>
@@ -35,9 +36,11 @@ export default function homeView(albums) {
                                         
                                     </div>
                                 </div>
+                                </div>
                             `
                             }).join("")
                         }
+                    </div>
                 </section>
                 <section class="addNewAlbum">
                     <h3>Add A New Album</h3>
@@ -48,18 +51,18 @@ export default function homeView(albums) {
                         <!-- <label></label>
                         <label></label>
                         <label></label> -->
-                        <input type="text" name="album-title" placeholder="Album Title" id="">
-                        <input type="text" name="album-artist" placeholder="Album Artist" id="">
-                        <input type="text" name="album-duration" placeholder="Album Duration" id="">
+                        <input type="text" name="album-title" placeholder="Album Title" id="album-title">
+                        <input type="text" name="album-artist" placeholder="Album Artist" id="album-artist">
+                        <input type="text" name="album-duration" placeholder="Album Duration" id="album-duration">
                         <label>Record Label:</label>
                         <label>Album Cover Image:</label>
                         <label></label>
                         <!-- <label></label>
                         <label></label>
                         <label></label> -->
-                        <input type="text" name="album-record-label" placeholder="Record Label" id="">
-                        <input type="file" name="album-img" placeholder="Album Title" id="">
-                        <button type="submit">Submit</button>
+                        <input type="text" name="album-record-label" placeholder="Record Label" id="album-record-label">
+                        <input type="text" name="album-img" placeholder="Image Url" id="album-img">
+                        <button class="addAlbumBtn" type="submit">Submit</button>
                     </div>
                 </section>
                 <section class="dispenser">
