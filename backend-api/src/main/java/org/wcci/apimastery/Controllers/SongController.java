@@ -1,6 +1,7 @@
 package org.wcci.apimastery.Controllers;
 
 import org.wcci.apimastery.Models.Album;
+import org.wcci.apimastery.Models.Comment;
 import org.wcci.apimastery.Models.Song;
 import org.wcci.apimastery.Repos.AlbumRepo;
 import org.wcci.apimastery.Repos.SongRepo;
@@ -30,6 +31,7 @@ public class SongController {
     @PostMapping("/api/album/{id}/newsong")
     public Album addNewSong(@RequestBody Song songToAdd, @PathVariable Long id) {
         Album addSongTo = albumRepo.findById(id).get();
+        songToAdd.setAlbum(addSongTo);
         songRepo.save(songToAdd);
         albumRepo.save(addSongTo);
         return addSongTo;
@@ -48,6 +50,13 @@ public class SongController {
         songToAdd.addRating(newRating);
         songRepo.save(songToAdd);
         return songToAdd;
+    }
+    @PostMapping("/api/song/{id}/addComment")
+    public Album songToAddCommentTo(@RequestBody Comment newComment, @PathVariable Long id) {
+        Song songToChange = songRepo.findById(id).get();
+        songToChange.addComment(newComment);
+        songRepo.save(songToChange);
+        return songToChange.getAlbum();
     }
     @DeleteMapping("/api/songs/{id}")
     public String deleteById(@PathVariable("id") Long id) {

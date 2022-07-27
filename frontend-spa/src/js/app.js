@@ -115,11 +115,9 @@ function makeAlbumView(albumId) {
             addSongBtn.addEventListener("click", () => {
                 const newSongJson = {
                     "title": songTitleIN.value,
-                    "duration": songDurationtIN.value,
-                    "artist": albumNumber.artist,
-                    "album": albumIdEl.value,                 
+                    "duration": songDurationtIN.value,              
                 }
-                fetch(`http://localhost:8080/api/album/${albumNumber.id}/newsong`, {
+                fetch(`http://localhost:8080/api/album/${albumIdEl.value}/newsong`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -129,11 +127,68 @@ function makeAlbumView(albumId) {
                 })
                     .then(res => res.json())
                     .then(updateAlbum => {
-                        makeHomeView(updateAlbum);
+                        makeAlbumView(updateAlbum.id);
                     })
+                    
 
             })
-        })
+            
+            // const songReviewBtn = document.getElementsByClassName("reviewBtn");
+            // const songPopupBtn = document.querySelector(".songPopup")
+            // songPopupBtn.addEventListener("click", ()=>{
+                let songIdEl = document.querySelector(".songId");
+                let songReviewAuthorIN = document.querySelector(".review-author");
+                let songReviewContentIN = document.querySelector(".review-content");
+                let songReviewBtn = document.querySelectorAll(".reviewBtn");
+
+                songReviewBtn.forEach(x =>{
+                    x.addEventListener("click", () => {
+                        const newSongCommentJson = {
+                            "author": songReviewAuthorIN.value,
+                            "content": songReviewContentIN.value,
+                        }
+                        fetch(`http://localhost:8080/api/song/${songIdEl.value}/addComment`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(newSongCommentJson)
+        
+                        })
+                            .then(res => res.json())
+                            .then(albumSong => {
+                                console.log(songIdEl);
+                                makeAlbumView(albumSong.id);
+                            })
+                            .catch(err => console.error(err))
+                    })
+                })
+                // })
+
+            //     songReviewBtn.addEventListener("click", () => {
+            //         const newSongCommentJson = {
+            //             "author": songReviewAuthorIN.value,
+            //             "content": songReviewContentIN.value,
+            //         }
+            //         fetch(`http://localhost:8080/api/song/${songIdEl.value}/addComment`, {
+            //             method: 'POST',
+            //             headers: {
+            //                 'Content-Type': 'application/json'
+            //             },
+            //             body: JSON.stringify(newSongCommentJson)
+    
+            //         })
+            //             .then(res => res.json())
+            //             .then(albumSong => {
+            //                 console.log(albumSong.id);
+            //                 // makeAlbumView(albumSong.id);
+            //             })
+            //             .catch(err => console.error(err))
+            //     })
+            // })
+            })
+
+            
         .catch(err => console.error(err))
 
 

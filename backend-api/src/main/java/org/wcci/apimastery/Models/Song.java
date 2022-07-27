@@ -59,6 +59,11 @@ public class Song {
         return comments;
     }
 
+    public void setAlbum(Album albumToAddSongTo){
+        this.artist = albumToAddSongTo.getArtist();
+        this.album = albumToAddSongTo;
+    }
+
     public void changeTitle(String newTitle){
         title = newTitle;
     }

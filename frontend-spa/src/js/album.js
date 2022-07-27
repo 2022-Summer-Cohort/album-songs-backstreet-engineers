@@ -124,7 +124,7 @@ export default function albumView(album) {
             return `
          <ol>
         <div class="trackButton">
-            <a class="aboutUs" href="${'#' + song.title}">
+            <a class="songPopup" href="${'#' + song.title}">
                 <li>${song.title}</li>
             </a>
         </div>
@@ -137,7 +137,7 @@ ${album.songs.map(song => {
 <div id="${song.title}" class="overlay">
         <div class="popup">
             <div class="songInfoGroup">
-                <h3
+                <input type="hidden" class="songId" value="${song.id}">
                 <h3>${song.title}</h3>
                 <ul>
                 <h4>Song Duration</h4>
@@ -181,9 +181,9 @@ ${album.songs.map(song => {
                 <hr>
             <div class="songLeaveReview">
             <h3>Leave A Review</h3>
-                <input type="text" placeholder="reviewer's name">
-                <input type="text" placeholder="write a review...">
-                <button type="submit">Submit</button>
+                <input class="review-author" type="text" placeholder="reviewer's name">
+                <input class="review-content" type="text" placeholder="write a review...">
+                <button class="reviewBtn" id="review-Btn">Submit</button>
             </div>
         </div>
     </div>
