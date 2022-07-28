@@ -156,33 +156,28 @@ function makeAlbumView(albumId) {
 
             })
 
-
             songEl.forEach(songTest => {
                 const songIdEl = songTest.querySelector(".songId");
-                // const songRatingIN = songTest.querySelector(".song-rating");
                 const songRatingBtn = songTest.querySelector(".song-ratingBtn");
 
                 songRatingBtn.addEventListener("click", () => {
-                    // const newSongRatingJson = songRatingIN.value;
                     const songRatingIN = songTest.querySelector(".song-rating");
-                    // const newSongRatingJson = {
-                    //     "rating": songRatingIN.value,
-                    // }
+
                     fetch(`http://localhost:8080/api/songs/${songIdEl.value}/ratings`, {
                         method: 'PATCH',
-                        // headers: {
-                        //     'Content-Type': 'application/json'
-                        // },
-                        // body: JSON.stringify(newSongRatingJson)
-                        body: songRatingIN.value
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(songRatingIN.value)
+
                     })
                         .then(res => res.json())
                         .then(albumSong => {
+                            console.log(albumSong);
                             makeAlbumView(albumSong.id);
                         })
                         .catch(err => console.error(err))
                 })
-
             })
         })
         .catch(err => console.error(err))
