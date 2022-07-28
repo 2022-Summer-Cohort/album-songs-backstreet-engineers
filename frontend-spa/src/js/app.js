@@ -129,10 +129,10 @@ function makeAlbumView(albumId) {
             let songEl = document.querySelectorAll(".super");
 
             songEl.forEach(songTest => {
+                const songIdEl = songTest.querySelector(".songId");
                 const songReviewContentIN = songTest.querySelector(".review-content");
                 const songReviewAuthorIN = songTest.querySelector(".review-author");
                 const songReviewBtn = songTest.querySelector(".reviewBtn");
-                const songIdEl = songTest.querySelector(".songId");
 
                 songReviewBtn.addEventListener("click", () => {
                     const newSongCommentJson = {
@@ -155,24 +155,26 @@ function makeAlbumView(albumId) {
                 })
 
             })
-           
+
 
             songEl.forEach(songTest => {
-                const songRatingIN = songTest.querySelector(".song-rating");
-                const songRatingBtn = songTest.querySelector(".song-ratingBtn");
                 const songIdEl = songTest.querySelector(".songId");
-               
+                // const songRatingIN = songTest.querySelector(".song-rating");
+                const songRatingBtn = songTest.querySelector(".song-ratingBtn");
 
                 songRatingBtn.addEventListener("click", () => {
-                    const newSongRatingJson = songRatingIN.value
-                        
-                    
+                    // const newSongRatingJson = songRatingIN.value;
+                    const songRatingIN = songTest.querySelector(".song-rating");
+                    // const newSongRatingJson = {
+                    //     "rating": songRatingIN.value,
+                    // }
                     fetch(`http://localhost:8080/api/songs/${songIdEl.value}/ratings`, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(newSongRatingJson)
+                        method: 'PATCH',
+                        // headers: {
+                        //     'Content-Type': 'application/json'
+                        // },
+                        // body: JSON.stringify(newSongRatingJson)
+                        body: songRatingIN.value
                     })
                         .then(res => res.json())
                         .then(albumSong => {
@@ -182,7 +184,6 @@ function makeAlbumView(albumId) {
                 })
 
             })
-
         })
         .catch(err => console.error(err))
 }

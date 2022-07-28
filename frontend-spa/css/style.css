@@ -300,6 +300,9 @@ button:hover {
 .albumLeaveReview button {
     background-color: purple;
 }
+.song-ratingBtn {
+    background-color: purple;
+}
 
 /* TRACKLISTINGS */
 .plusSign {

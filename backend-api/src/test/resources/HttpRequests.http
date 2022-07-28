@@ -61,3 +61,10 @@ POST http://localhost:8080/api/song/2/addComment
 Content-Type: application/json
 
 {"author":"Kevin", "content": "word"}
+
+### Add rating to Song.
+PATCH  http://localhost:8080/api/songs/2/ratings
+Content-Type: application/json
+
+3
+
