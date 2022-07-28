@@ -544,7 +544,9 @@ footer {
 #popup1 .content {
     color: white;
 }
-
+.super {
+    overflow: auto;
+}
 /* OUR DEV TEAM */
 #popup2 {
     overflow: auto;

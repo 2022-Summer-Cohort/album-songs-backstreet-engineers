@@ -54,9 +54,11 @@ public class SongController {
     @PostMapping("/api/song/{id}/addComment")
     public Album songToAddCommentTo(@RequestBody Comment newComment, @PathVariable Long id) {
         Song songToChange = songRepo.findById(id).get();
+        Album newAlbum = songToChange.getAlbum();
         songToChange.addComment(newComment);
         songRepo.save(songToChange);
-        return songToChange.getAlbum();
+        albumRepo.save(newAlbum);
+        return newAlbum;
     }
     @DeleteMapping("/api/songs/{id}")
     public String deleteById(@PathVariable("id") Long id) {
