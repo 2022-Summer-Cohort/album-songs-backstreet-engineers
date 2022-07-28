@@ -44,12 +44,12 @@ public class SongController {
         songRepo.save(songToChange);
         return songToChange;
     }
-    @PostMapping("/api/songs/{id}/ratings")
-    public Song songToAddRating (@RequestBody double newRating, @PathVariable Long id){
+    @PatchMapping ("/api/songs/{id}/ratings")
+    public Album songToAddRating (@RequestBody Float newRating, @PathVariable Long id){
         Song songToAdd = songRepo.findById(id).get();
         songToAdd.addRating(newRating);
         songRepo.save(songToAdd);
-        return songToAdd;
+        return songToAdd.getAlbum();
     }
     @PostMapping("/api/song/{id}/addComment")
     public Album songToAddCommentTo(@RequestBody Comment newComment, @PathVariable Long id) {

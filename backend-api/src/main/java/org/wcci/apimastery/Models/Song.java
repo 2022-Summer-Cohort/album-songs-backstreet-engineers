@@ -72,7 +72,8 @@ public class Song {
         for (double rating: ratings){
             sum += rating;
         }
-        return sum/ratings.size();
+//        return sum/ratings.size();
+        return Math.round((((sum/ratings.size()) * 100)) / 100);
     }
     public void addRating(double newRating) {
         ratings.add(newRating);
