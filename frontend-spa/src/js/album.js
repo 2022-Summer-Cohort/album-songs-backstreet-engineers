@@ -149,8 +149,8 @@ export default function albumView(album) {
                         <div class="content">
                             <div class="songLeaveRating">
                                 <label for="stars">Rate (0-5):</label>
-                                <input type="number" name="stars" min="0" max="5">
-                                <button type="submit">Submit</button>
+                                <input  class="song-rating" type="number" name="stars" min="0" max="5">
+                                <button  class="song-ratingBtn" type="submit">Submit</button>
                             </div>
                         </div>
                         <hr>

@@ -155,6 +155,33 @@ function makeAlbumView(albumId) {
                 })
 
             })
+           
+
+            songEl.forEach(songTest => {
+                const songRatingIN = songTest.querySelector(".song-rating");
+                const songRatingBtn = songTest.querySelector(".song-ratingBtn");
+                const songIdEl = songTest.querySelector(".songId");
+               
+
+                songRatingBtn.addEventListener("click", () => {
+                    const newSongRatingJson = songRatingIN.value
+                        
+                    
+                    fetch(`http://localhost:8080/api/songs/${songIdEl.value}/ratings`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(newSongRatingJson)
+                    })
+                        .then(res => res.json())
+                        .then(albumSong => {
+                            makeAlbumView(albumSong.id);
+                        })
+                        .catch(err => console.error(err))
+                })
+
+            })
 
         })
         .catch(err => console.error(err))
