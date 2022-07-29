@@ -34,16 +34,16 @@ export default function footer() {
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Ferie Dagnew</h4>
-                                        <p class="jobTitle">Back End Developer</p>
+                                        <p class="jobTitle">Front & Back End Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
-                                            <a href="github.com" class="devGithubs">
+                                            <a href="https://github.com/FerieDagnew" class="devGithubs">
                                                 <img src="/images/githublogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="linkedin.com" class="linkedIn">
+                                            <a href="https://www.linkedin.com/in/feriedagnew" class="linkedIn">
                                                 <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
@@ -62,16 +62,16 @@ export default function footer() {
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Taylour Harris</h4>
-                                        <p class="jobTitle">Front End Developer</p>
+                                        <p class="jobTitle">Front & Back End Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
-                                            <a href="github.com" class="devGithubs">
+                                            <a href="https://github.com/TaylourH" class="devGithubs">
                                                 <img src="/images/githublogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="linkedin.com" class="linkedIn">
+                                            <a href="https://www.linkedin.com/in/taylourharris" class="linkedIn">
                                                 <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
@@ -90,16 +90,16 @@ export default function footer() {
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Alex Stein</h4>
-                                        <p class="jobTitle">Back End Developer</p>
+                                        <p class="jobTitle">Front & Back End Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
-                                            <a href="github.com" class="devGithubs">
+                                            <a href="https://github.com/AlexKStein" class="devGithubs">
                                                 <img src="/images/githublogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="linkedin.com" class="linkedIn">
+                                            <a href="https://www.linkedin.com/in/alexkstein" class="linkedIn">
                                                 <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
@@ -118,16 +118,16 @@ export default function footer() {
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Zakariya Mohamud</h4>
-                                        <p class="jobTitle">Front End Developer</p>
+                                        <p class="jobTitle">Front & Back End Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
-                                            <a href="github.com" class="devGithubs">
+                                            <a href="https://github.com/ZakariyaMohamud" class="devGithubs">
                                                 <img src="/images/githublogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="linkedin.com" class="linkedIn">
+                                            <a href="https://www.linkedin.com/in/zakariya-mohamud/" class="linkedIn">
                                                 <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
