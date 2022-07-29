@@ -5,7 +5,9 @@ export default function albumView(album) {
     <section class="backgroundStructure">
     <section class="sodaMachine">
         <section class="sodaMachineLeft">
-            <img src="/images/sodaSoundLogo.png" alt="">
+            <div class="logoNameCombo">
+                <h1>SODA SOUND</h1>
+            </div>
         </section>
         <section class="sodaMachineMiddle">
             <section class="albumGroup">
@@ -184,15 +186,15 @@ export default function albumView(album) {
             </section>
             <section class="dispenser">
                 <div class="dispenseOuter">
-                    <div class="dispenseInner"></div>
-                </div>
+                    <div class="dispenseInner">
+                
                 <div class="notes">
                     <img class="note" src="/images/quarterNote.png" alt="">
                     <img class="note" src="/images/wholeNote.png" alt="">
                     <img class="note" src="/images/doubleNote.png" alt="">
                     <img class="note" src="/images/clefNote.png" alt="">
                     <img class="note" src="/images/treble.png" alt="">
-                </div>
+                </div></div></div>
             </section>
         </section>
         <section class="sodaMachineRight">

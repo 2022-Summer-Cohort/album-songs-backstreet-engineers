@@ -36,7 +36,10 @@ header {
     border-style: solid;
     border-radius: 25px; */
 }
-
+.fakeSideThing{
+    writing-mode: vertical-lr;
+    transform: rotateX(180deg);
+}
 .boxBottleHome img:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
@@ -73,7 +76,15 @@ header {
     z-index: 1;
     opacity: 95%;
 }
+.cardTextHome {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
 
+.cardTextHome ul li {
+    margin: 1rem;
+}
 .addNewAlbum {
     padding: 1rem;
 }
@@ -113,10 +124,11 @@ flex-direction: row;
 
 /* SODA MACHINE LEFT */
 .logoNameCombo {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
     display: flex;
-    gap: 1rem;
+    margin: 1rem 0;
     align-items: center;
-    transform: rotate(-.25turn);
 }
 
 /* SODA MACHINE MIDDLE */
