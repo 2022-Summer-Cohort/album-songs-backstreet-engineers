@@ -2,7 +2,7 @@
 .topPage {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -14,13 +14,19 @@ header {
     padding: 0;
     margin: 0;
 }
-
+.back-btn{
+    display: flex;
+   margin-left: 2rem;
+   padding: .25rem;
+}
+.headerLogo{
+    display: flex;
+}
 .siteNameLogo {
     display: flex;
-    flex-direction: row-reverse;
-    gap: .25rem;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
 /*HOME PAGE STUFF*/
 .cardTextHome {
     display: flex;
@@ -295,6 +301,9 @@ flex-direction: row;
 .songFix li:hover {
     background-color: rgb(19, 173, 173);
 
+}
+.song-title{
+    display: flex;
 }
 
 .bigSongTitle {

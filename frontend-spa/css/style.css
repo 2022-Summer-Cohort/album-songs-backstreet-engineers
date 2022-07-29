@@ -306,7 +306,9 @@ button:hover {
 .song-ratingBtn {
     background-color: purple;
 }
-
+.song-name-submit{
+    background-color: purple;
+}
 /* TRACKLISTINGS */
 .plusSign {
     height: 10px;

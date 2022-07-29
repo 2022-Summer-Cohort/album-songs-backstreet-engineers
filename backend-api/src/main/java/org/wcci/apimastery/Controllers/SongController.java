@@ -38,11 +38,11 @@ public class SongController {
     }
 
     @PatchMapping("/api/songs/{id}/name")
-    public Song songToChangeTitle(@RequestBody String newTitle, @PathVariable Long id) {
+    public Album songToChangeTitle(@RequestBody String newTitle, @PathVariable Long id) {
         Song songToChange = songRepo.findById(id).get();
         songToChange.changeTitle(newTitle);
         songRepo.save(songToChange);
-        return songToChange;
+        return songToChange.getAlbum();
     }
     @PatchMapping ("/api/songs/{id}/ratings")
     public Album songToAddRating (@RequestBody Float newRating, @PathVariable Long id){
