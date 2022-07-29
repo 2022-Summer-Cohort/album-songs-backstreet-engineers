@@ -135,11 +135,11 @@ export default function albumView(album) {
                 <ol>
                     ${album.songs.map(song => {
                     return `
-                    <div class="trackButton">
                         <a class="songPopup" href="${'#' + song.title}">
-                            <li>${song.title}</li>
+                            <div class="trackButton">
+                                <li>${song.title}</li>
+                            </div>
                         </a>
-                    </div>
                     `
                     }).join("")
                     }
