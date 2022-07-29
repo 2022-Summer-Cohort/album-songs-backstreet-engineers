@@ -43,7 +43,7 @@ public class AlbumController {
         return albumRepo.findAll();
     }
 
-    @PatchMapping("/api/album/{id}/name")
+    @PatchMapping("/api/album/{id}/changeName")
     public Album albumChangeTitle(@RequestBody String newTitle,@PathVariable Long id){
         Album albumToChange = albumRepo.findById(id).get();
         albumToChange.changeTitle(newTitle);

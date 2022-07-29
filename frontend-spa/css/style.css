@@ -61,8 +61,11 @@ button:hover {
 .logoNameCombo {
     display: inline-block;
     position: relative;
+    background-color: bisque;
+    border-radius: 0 25px 25px 0;
+    padding: 1rem 0;
 }
-
+/* 
 .logoNameCombo::before {
     content: '';
     height: 100%;
@@ -85,7 +88,7 @@ button:hover {
     left: -.1em;
     right: -.1em;
     z-index: -1;
-}
+} */
 
 .logoNameCombo img {
     height: 100px;
@@ -94,7 +97,7 @@ button:hover {
 
 .logoNameCombo h1 {
     color: darkcyan;
-    font-size: 100pt;
+    font-size: 80pt;
     white-space: nowrap;
 }
 
@@ -303,7 +306,9 @@ button:hover {
 .song-ratingBtn {
     background-color: purple;
 }
-
+.song-name-submit{
+    background-color: purple;
+}
 /* TRACKLISTINGS */
 .plusSign {
     height: 10px;
@@ -407,9 +412,9 @@ button:hover {
 
 .notes {
     animation: fly 5s linear infinite;
-    bottom: 25px;
-    right: -200px;
-    position: sticky;
+    /* bottom: 25px;
+    right: -200px; */
+    /* position: sticky; */
     z-index: 999;
     pointer-events: none;
 }
@@ -422,7 +427,7 @@ button:hover {
     }
 
     50% {
-        transform: translateX(-150px);
+        transform: translateX(-100px);
         opacity: 1;
     }
 
@@ -432,7 +437,7 @@ button:hover {
     }
 
     100% {
-        transform: translateX(150px);
+        transform: translateX(100px);
         opacity: 1;
     }
 }

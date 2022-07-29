@@ -65,8 +65,12 @@ function makeAlbumView(albumId) {
             container.innerHTML += albumView(albumNumber);
             container.innerHTML += footer();
 
-            const goHomeBtn = document.querySelector(".siteNameLogo");
+            const goHomeBtn = document.querySelector(".back-btn");
             goHomeBtn.addEventListener("click", () => {
+                makeHomeView();
+            })
+            const alsoHomeBtn = document.querySelector(".headerLogo");
+            alsoHomeBtn.addEventListener("click", () => {
                 makeHomeView();
             })
             const commentAuthorIN = document.querySelector(".reviewName");
@@ -90,8 +94,29 @@ function makeAlbumView(albumId) {
                         makeAlbumView(albumNumber.id);
                     })
             })
-            const deleteBtn = document.querySelector(".delete-button");
+            const albumTitleBtn = document.querySelector(".album-title-submit");
             const albumIdEl = document.querySelector(".album-id");
+            const newTitleIn = document.querySelector(".new-title");
+
+            albumTitleBtn.addEventListener("click", ()=>{
+                fetch(`http://localhost:8080/api/album/${albumIdEl.value}/changeName`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: newTitleIn.value
+                })
+                    .then(res => res.json())
+                    .then(albumWithTitle => {
+                        console.log(albumWithTitle);
+                        makeAlbumView(albumWithTitle.id);
+                    })
+                    .catch(err => console.error(err))
+            })
+
+
+            const deleteBtn = document.querySelector(".delete-button");
+           
             deleteBtn.addEventListener("click", () => {
                 fetch(`http://localhost:8080/api/album/${albumIdEl.value}`, {
                     method: 'DELETE'
@@ -133,7 +158,26 @@ function makeAlbumView(albumId) {
                 const songReviewContentIN = songTest.querySelector(".review-content");
                 const songReviewAuthorIN = songTest.querySelector(".review-author");
                 const songReviewBtn = songTest.querySelector(".reviewBtn");
-
+                const songNameBtn = songTest.querySelector(".song-name-submit");
+                
+                songNameBtn.addEventListener("click", ()=>{
+                    const songNameIn = songTest.querySelector(".new-song-name");
+                    console.log(songNameIn);
+                    fetch(`http://localhost:8080/api/songs/${songIdEl.value}/name`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: songNameIn.value
+                })
+                    .then(res => res.json())
+                    .then(albumNewSongName => {
+                    
+                        console.log(albumNewSongName);
+                        makeAlbumView(albumNewSongName.id);
+                    })
+                    .catch(err => console.error(err))
+                })
                 songReviewBtn.addEventListener("click", () => {
                     const newSongCommentJson = {
                         "author": songReviewAuthorIN.value,

@@ -5,13 +5,15 @@ export default function albumView(album) {
     <section class="backgroundStructure">
     <section class="sodaMachine">
         <section class="sodaMachineLeft">
-            <img src="/images/sodaSoundLogo.png" alt="">
+            <div class="logoNameCombo">
+                <h1>SODA SOUND</h1>
+            </div>
         </section>
         <section class="sodaMachineMiddle">
             <section class="albumGroup">
                 <div class="albumGroupPart1">
                     <div class="albumHeader">
-                        <h2 class="albumName">${album.title} <span class="artistName">${album.artist}</span></h2>
+                        <h2 class="albumName">${album.title} <span class="artistName">by ${album.artist}</span></h2>
                     </div>
                 </div>
                 <div class="albumGroupPart2">
@@ -45,7 +47,24 @@ export default function albumView(album) {
                                 <a href="#popup3">
                                     <h4 class="reviewPop">Reviews</h4>
                                 </a>
+                            </div> 
+
+                            <a href="#album-change">
+                                <button class="change-album-title" >Change Album Name</button>
+                            </a>
+
+                            <div id="album-change" class="overlay">
+                                <div class="popup">
+                                    <a class="close" href="#">&times;</a>
+                                    <div class="content">
+                                        
+                                        <h4>New Album Title:</h4>
+                                        <input type="text" class="new-title" placeholder="new album title">
+                                        <button class="album-title-submit" type="submit">Submit</button>
+                                    </div>
+                                </div>
                             </div>
+                         
                             <button type="button" class="delete-button">
                                 <img class="trashcan" src="/images/trashcan.png" alt="">
                             </button>
@@ -132,6 +151,10 @@ export default function albumView(album) {
                         <div class="songInfoGroup">
                             <input type="hidden" class="songId" value="${song.id}">
                             <h3>${song.title}</h3>
+                            <div class="song-title">
+                                <input class="new-song-name" type="text" value="" placeholder="New Song Name">
+                                <button class="song-name-submit">Submit</button>
+                            </div>
                             <ul>
                                 <h4>Song Duration</h4>
                                 <li>${song.duration}</li>
@@ -184,15 +207,15 @@ export default function albumView(album) {
             </section>
             <section class="dispenser">
                 <div class="dispenseOuter">
-                    <div class="dispenseInner"></div>
-                </div>
+                    <div class="dispenseInner">
+                
                 <div class="notes">
                     <img class="note" src="/images/quarterNote.png" alt="">
                     <img class="note" src="/images/wholeNote.png" alt="">
                     <img class="note" src="/images/doubleNote.png" alt="">
                     <img class="note" src="/images/clefNote.png" alt="">
                     <img class="note" src="/images/treble.png" alt="">
-                </div>
+                </div></div></div>
             </section>
         </section>
         <section class="sodaMachineRight">
