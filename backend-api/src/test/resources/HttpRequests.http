@@ -1,0 +1,70 @@
+### Get all Albums
+GET http://localhost:8080/api/albums
+Accept: application/json
+
+### Get an album with an ID
+GET http://localhost:8080/api/album/4
+Content-Type: application/json
+
+### Post a new Album resource.
+POST http://localhost:8080/api/album/new
+Content-Type: application/json
+
+{"title":"Soda Beats",
+"artist": "Grandpa",
+"duration": "55 minutes",
+"recordLabel":"That Big One",
+"imageUrl":"/images/badCover.jpg"
+}
+
+### Update an album's title property.
+PATCH http://localhost:8080/api/album/1/name
+
+Sooooodaaaaaa
+
+### Update album by ID's average rating
+POST http://localhost:8080/api/albums/1/avgRating
+Content-Type: aapplication/json 
+
+
+### Get all songs
+GET http://localhost:8080/api/songs
+Accept: application/json
+
+### Get an song with an ID
+GET http://localhost:8080/api/songs/2
+Content-Type: application/json
+
+### Post a new song.
+POST http://localhost:8080/api/songs
+Content-Type: application/json
+
+{"title":"Somewhere over the Rainbow","duration": 4.15}
+
+### Update a song's title
+PATCH http://localhost:8080/api/songs/1/name
+
+Survivor
+
+### Delete Album by id.
+DELETE http://localhost:8080/api/album/1
+Content-Type: application/json
+
+### Post add album comment a new Album resource.
+POST http://localhost:8080/api/album/1/addComment
+Content-Type: application/json
+
+{"author":"Kevin", "content": "word"}
+
+### Add comment to Song.
+POST http://localhost:8080/api/song/2/addComment
+Content-Type: application/json
+
+{"author":"Kevin", "content": "word"}
+
+### Add rating to Song.
+PATCH  http://localhost:8080/api/songs/2/ratings
+Content-Type: application/json
+
+3
+
