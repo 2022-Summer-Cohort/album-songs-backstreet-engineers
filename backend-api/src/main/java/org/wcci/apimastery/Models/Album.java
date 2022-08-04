@@ -77,7 +77,6 @@ public class Album {
         for (Song song: songs) {
             sum += song.avgRating();
         }
-//        return (sum / songs.size());
         return Math.round((((sum/songs.size()) * 100)) / 100);
     }
 }
